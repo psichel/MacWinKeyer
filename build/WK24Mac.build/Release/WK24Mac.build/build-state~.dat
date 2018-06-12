@@ -1,0 +1,575 @@
+TWK24Mac
+v7
+r0
+t329612022.292553
+cCheck dependencies
+cProcessInfoPlistFile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/Info.plist WK24Mac-Info.plist
+cCopyStringsFile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+cCompileXIB /Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib
+cCopyPlistFile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/Resources/AppData.plist AppData.plist
+cCpResource build/Release/WK24Mac.app/Contents/Resources/wk24mac.icns wk24mac.icns
+cProcessPCH /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fwyinmojfhozqrgzeberggqyoiuq/WK24Mac_Prefix.pch.gch WK24Mac_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cProcessPCH /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fohrshslublvwihinnylusvhtpuj/WK24Mac_Prefix.pch.gch WK24Mac_Prefix.pch normal x86_64 c com.apple.compilers.gcc.4_2
+cProcessPCH /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-guekncqvpsakyibttttpufugpqhr/WK24Mac_Prefix.pch.gch WK24Mac_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cProcessPCH /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-adfptvsywzerqkcfgvwanjsdweum/WK24Mac_Prefix.pch.gch WK24Mac_Prefix.pch normal i386 c com.apple.compilers.gcc.4_2
+cProcessPCH /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fudiqxllploymlepoglgegnngirq/WK24Mac_Prefix.pch.gch WK24Mac_Prefix.pch normal ppc objective-c com.apple.compilers.gcc.4_2
+cProcessPCH /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-ceovipwuhpwchpcmxyrunnxssjde/WK24Mac_Prefix.pch.gch WK24Mac_Prefix.pch normal ppc c com.apple.compilers.gcc.4_2
+cCompileC build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/main.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/WK24MacAppDelegate.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/serial.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c normal x86_64 c com.apple.compilers.gcc.4_2
+cCompileC build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/main.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/WK24MacAppDelegate.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/WK24Mac normal x86_64
+cCompileC build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/serial.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c normal i386 c com.apple.compilers.gcc.4_2
+cCompileC build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/main.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m normal ppc objective-c com.apple.compilers.gcc.4_2
+cLd /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/WK24Mac normal i386
+cCompileC build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/WK24MacAppDelegate.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m normal ppc objective-c com.apple.compilers.gcc.4_2
+cCompileC build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/serial.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c normal ppc c com.apple.compilers.gcc.4_2
+cLd /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/WK24Mac normal ppc
+cCreateUniversalBinary /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/MacOS/WK24Mac normal "x86_64 i386 ppc"
+cGenerateDSYMFile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app.dSYM /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/MacOS/WK24Mac
+cTouch /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004CAA740B00000000000000EE
+t1286239243
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
+c0000000040C4AA6800000000000001E5
+t1086630504
+s485
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h
+c000000004C23A0120000000000012048
+t1277403154
+s73800
+
+N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/IOKit.framework/Headers/serial/IOSerialKeys.h
+c000000004C239B710000000000000B28
+t1277401969
+s2856
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/ioctl.h
+c000000004C239946000000000000116C
+t1277401414
+s4460
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/select.h
+c000000004C23994700000000000016A2
+t1277401415
+s5794
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/termios.h
+c000000004BBD2CE900000000000004D4
+t1270689001
+s1236
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/unistd.h
+c000000004BBD2CE9000000000000563E
+t1270689001
+s22078
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004A1F2D63000000000000A5E0
+t1243557219
+s42464
+
+N/System/Library/Frameworks/IOKit.framework/IOKit
+c000000004C8AD97D000000000017B260
+t1284168061
+s1552992
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/AppData.plist
+c000000004DF538510000000000000764
+t1307916369
+s1892
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/InfoPlist.strings
+c000000004DAF5F4C000000000000002D
+t1303338828
+s45
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib
+c000000004DF5435C00000000000751A9
+t1307919196
+s479657
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.h
+c000000004DF11D180000000000001B62
+t1307647256
+s7010
+i<Cocoa/Cocoa.h>
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m
+c000000004DF54275000000000000E858
+t1307918965
+s59480
+i"WK24MacAppDelegate.h"
+i"serial.h"
+i<termios.h>
+i<sys/ioctl.h>
+i<sys/select.h>
+i<unistd.h>
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac_Prefix.pch
+c000000004DAF5F720000000000000091
+t1303338866
+s145
+i<Cocoa/Cocoa.h>
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app
+t1307919222
+s102
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app.dSYM
+t1307919222
+s102
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/Info.plist
+t1307919210
+s1035
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/MacOS/WK24Mac
+t1307919222
+s234820
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/PkgInfo
+t1307919210
+s8
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/Resources/AppData.plist
+t1307919211
+s1892
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/Resources/English.lproj/InfoPlist.strings
+t1307919210
+s92
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/Resources/English.lproj/MainMenu.nib
+t1307919211
+s112085
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/Resources/wk24mac.icns
+t1307919211
+s98671
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/WK24Mac
+t1307919221
+s66900
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/WK24Mac.LinkFileList
+c000000004DF5436A000000000000017E
+t1307919210
+s382
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/WK24MacAppDelegate.o
+t1307919220
+s116840
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/main.o
+t1307919219
+s4876
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/serial.o
+t1307919220
+s4812
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/WK24Mac
+t1307919222
+s62788
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/WK24Mac.LinkFileList
+c000000004DF5436A000000000000017B
+t1307919210
+s379
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/WK24MacAppDelegate.o
+t1307919222
+s115240
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/main.o
+t1307919221
+s4908
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/serial.o
+t1307919221
+s4912
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/WK24Mac
+t1307919220
+s94816
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/WK24Mac.LinkFileList
+c000000004DF5436A0000000000000184
+t1307919210
+s388
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/WK24MacAppDelegate.o
+t1307919220
+s180388
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/main.o
+t1307919219
+s5080
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/serial.o
+t1307919219
+s5760
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m
+c000000004DAF5F590000000000000101
+t1303338841
+s257
+i<Cocoa/Cocoa.h>
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c
+c000000004DAF5F610000000000000703
+t1303338849
+s1795
+i"serial.h"
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.h
+c000000004DAF5F650000000000000117
+t1303338853
+s279
+i<IOKit/IOKitLib.h>
+i<IOKit/serial/IOSerialKeys.h>
+
+N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/wk24mac.icns
+c000000004DB562D2000000000001816F
+t1303732946
+s98671
+
+N/var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-adfptvsywzerqkcfgvwanjsdweum/WK24Mac_Prefix.pch.gch
+t1307919216
+s2187632
+
+N/var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-ceovipwuhpwchpcmxyrunnxssjde/WK24Mac_Prefix.pch.gch
+t1307919216
+s1950064
+
+N/var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fohrshslublvwihinnylusvhtpuj/WK24Mac_Prefix.pch.gch
+t1307919211
+s2195824
+
+N/var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fudiqxllploymlepoglgegnngirq/WK24Mac_Prefix.pch.gch
+t1307919219
+s52835920
+
+N/var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fwyinmojfhozqrgzeberggqyoiuq/WK24Mac_Prefix.pch.gch
+t1307919216
+s52967184
+
+N/var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-guekncqvpsakyibttttpufugpqhr/WK24Mac_Prefix.pch.gch
+t1307919215
+s55596848
+
+NWK24Mac-Info.plist
+c000000004DDF9BE4000000000000044F
+t1306500068
+s1103
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies329612010#329612010#0(0"0(0#1#0"8603377696#0"0#
+
+CCompileC build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/WK24MacAppDelegate.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s329612019.712884
+e329612020.885029
+r1
+xCompileC
+xbuild/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/WK24MacAppDelegate.o
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m329612019#329612020#0(0"0(0#0#73"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m8598287808#1672"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -fobjc-gc -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources/i386 -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources -include /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-guekncqvpsakyibttttpufugpqhr/WK24Mac_Prefix.pch -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m -o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/WK24MacAppDelegate.o0#
+
+CCompileC build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/main.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s329612019.567993
+e329612019.712782
+r1
+xCompileC
+xbuild/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/main.o
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m329612019#329612019#0(0"0(0#0#59"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m8608016736#1644"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -fobjc-gc -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources/i386 -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources -include /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-guekncqvpsakyibttttpufugpqhr/WK24Mac_Prefix.pch -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m -o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/main.o0#
+
+CCompileC build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/serial.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c normal i386 c com.apple.compilers.gcc.4_2
+s329612020.885133
+e329612020.968234
+r1
+xCompileC
+xbuild/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/serial.o
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@69"Compile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c329612020#329612020#0(0"0(0#0#61"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c8608103328#1628"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources/i386 -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources -include /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-adfptvsywzerqkcfgvwanjsdweum/WK24Mac_Prefix.pch -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c -o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/serial.o0#
+
+CCompileC build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/WK24MacAppDelegate.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m normal ppc objective-c com.apple.compilers.gcc.4_2
+s329612021.017424
+e329612022.186488
+r1
+xCompileC
+xbuild/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/WK24MacAppDelegate.o
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m
+xnormal
+xppc
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m329612021#329612022#0(0"0(0#0#73"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m8604039200#1679"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch ppc -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -fobjc-gc -mtune=G5 -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources/ppc -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources -include /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fudiqxllploymlepoglgegnngirq/WK24Mac_Prefix.pch -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m -o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/WK24MacAppDelegate.o0#
+
+CCompileC build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/main.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m normal ppc objective-c com.apple.compilers.gcc.4_2
+s329612020.935114
+e329612021.082004
+r1
+xCompileC
+xbuild/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/main.o
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m
+xnormal
+xppc
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m329612020#329612021#0(0"0(0#0#59"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m8608023968#1651"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch ppc -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -fobjc-gc -mtune=G5 -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources/ppc -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources -include /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fudiqxllploymlepoglgegnngirq/WK24Mac_Prefix.pch -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m -o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/main.o0#
+
+CCompileC build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/serial.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c normal ppc c com.apple.compilers.gcc.4_2
+s329612021.082100
+e329612021.214264
+r1
+xCompileC
+xbuild/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/serial.o
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c
+xnormal
+xppc
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@69"Compile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c329612021#329612021#0(0"0(0#0#61"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c8607417632#1635"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch ppc -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mtune=G5 -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources/ppc -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources -include /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-ceovipwuhpwchpcmxyrunnxssjde/WK24Mac_Prefix.pch -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c -o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/serial.o0#
+
+CCompileC build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/WK24MacAppDelegate.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s329612019.258428
+e329612020.815078
+r1
+xCompileC
+xbuild/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/WK24MacAppDelegate.o
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@81"Compile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m329612019#329612020#0(0"0(0#0#73"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m8607807328#1678"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -fobjc-gc -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources/x86_64 -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources -include /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fwyinmojfhozqrgzeberggqyoiuq/WK24Mac_Prefix.pch -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m -o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/WK24MacAppDelegate.o0#
+
+CCompileC build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/main.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s329612019.257166
+e329612019.395303
+r1
+xCompileC
+xbuild/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/main.o
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@67"Compile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m329612019#329612019#0(0"0(0#0#59"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m8608026208#1650"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -fobjc-gc -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources/x86_64 -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources -include /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fwyinmojfhozqrgzeberggqyoiuq/WK24Mac_Prefix.pch -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m -o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/main.o0#
+
+CCompileC build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/serial.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c normal x86_64 c com.apple.compilers.gcc.4_2
+s329612019.395392
+e329612019.567899
+r1
+xCompileC
+xbuild/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/serial.o
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@69"Compile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c329612019#329612019#0(0"0(0#0#61"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c8608059200#1634"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources/x86_64 -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources -include /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fohrshslublvwihinnylusvhtpuj/WK24Mac_Prefix.pch -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c -o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/serial.o0#
+
+CCompileXIB /Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib
+s329612010.940282
+e329612011.716818
+r1
+xCompileXIB
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib
+o/* com.apple.ibtool.document.notices */
+o/Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib:952: note: This view is clipping its content.
+o/Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib:716: note: This view is clipping its content.
+lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib329612010#329612011#0(292"/* com.apple.ibtool.document.notices *//Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib:952: note: This view is clipping its content./Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib:716: note: This view is clipping its content.2(13@34"This view is clipping its content.329612011#18446744073709551615#0#0(6@79"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib329611996#952#0#952#0#0"0(13@34"This view is clipping its content.329612011#18446744073709551615#0#0(6@79"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib329611996#716#0#716#0#0"0(0#0#79"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib8595435520#408"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/Resources/English.lproj/MainMenu.nib /Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib --sdk /Developer/SDKs/MacOSX10.6.sdk0#
+
+CCopyPlistFile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/Resources/AppData.plist AppData.plist
+s329612010.974335
+e329612011.008038
+r1
+xCopyPlistFile
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/Resources/AppData.plist
+xAppData.plist
+lSLF07#2@18"Copy AppData.plist329612010#329612011#0(0"0(0#0#66"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/AppData.plist8603520288#272"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copyplist AppData.plist --outdir /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/Resources0#
+
+CCopyStringsFile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+s329612010.939434
+e329612010.974241
+r1
+xCopyStringsFile
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/Resources/English.lproj/InfoPlist.strings
+xEnglish.lproj/InfoPlist.strings
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings329612010#329612010#0(0"0(0#0#84"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/InfoPlist.strings8607203552#395"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/Resources/English.lproj0#
+
+CCpResource build/Release/WK24Mac.app/Contents/Resources/wk24mac.icns wk24mac.icns
+s329612011.008128
+e329612011.013223
+r1
+xCpResource
+xbuild/Release/WK24Mac.app/Contents/Resources/wk24mac.icns
+xwk24mac.icns
+lSLF07#2@17"Copy wk24mac.icns329612011#329612011#0(0"0(0#0#65"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/wk24mac.icns8603163008#407"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -strip-debug-symbols -resolve-src-symlinks /Users/jimrogers_w4atk/Development/workspace/WK24Mac/wk24mac.icns /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/Resources0#
+
+CCreateUniversalBinary /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/MacOS/WK24Mac normal "x86_64 i386 ppc"
+s329612022.219405
+e329612022.222571
+r1
+xCreateUniversalBinary
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/MacOS/WK24Mac
+xnormal
+xx86_64 i386 ppc
+lSLF07#2@95"CreateUniversalBinary build/Release/WK24Mac.app/Contents/MacOS/WK24Mac normal "x86_64 i386 ppc"329612022#329612022#0(0"0(0#0#68"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/x86_64 i386 ppc8604050464#566"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    /usr/bin/lipo -create /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/WK24Mac /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/WK24Mac /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/WK24Mac -output /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/MacOS/WK24Mac0#
+
+CGenerateDSYMFile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app.dSYM /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/MacOS/WK24Mac
+s329612022.222643
+e329612022.289587
+r1
+xGenerateDSYMFile
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app.dSYM
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/MacOS/WK24Mac
+lSLF07#2@96"GenerateDSYMFile build/Release/WK24Mac.app.dSYM build/Release/WK24Mac.app/Contents/MacOS/WK24Mac329612022#329612022#0(0"0(0#0#101"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/MacOS/WK24Mac8603898304#281"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    /Developer/usr/bin/dsymutil /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/MacOS/WK24Mac -o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app.dSYM0#
+
+CLd /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/WK24Mac normal i386
+s329612020.968331
+e329612021.017311
+r1
+xLd
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/WK24Mac
+xnormal
+xi386
+lSLF07#2@127"Link /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/WK24Mac329612020#329612021#0(0"0(0#0#0"8604970496#654"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -filelist /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/WK24Mac.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -framework IOKit -o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/i386/WK24Mac0#
+
+CLd /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/WK24Mac normal ppc
+s329612022.186579
+e329612022.219304
+r1
+xLd
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/WK24Mac
+xnormal
+xppc
+lSLF07#2@126"Link /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/WK24Mac329612022#329612022#0(0"0(0#0#0"8607345568#651"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch ppc -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -filelist /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/WK24Mac.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -framework IOKit -o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/ppc/WK24Mac0#
+
+CLd /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/WK24Mac normal x86_64
+s329612020.815221
+e329612020.935008
+r1
+xLd
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/WK24Mac
+xnormal
+xx86_64
+lSLF07#2@129"Link /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/WK24Mac329612020#329612020#0(0"0(0#0#0"8603476768#660"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -filelist /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/WK24Mac.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -framework IOKit -o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/Objects-normal/x86_64/WK24Mac0#
+
+CProcessInfoPlistFile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/Info.plist WK24Mac-Info.plist
+s329612010.923931
+e329612010.939340
+r1
+xProcessInfoPlistFile
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/Info.plist
+xWK24Mac-Info.plist
+lSLF07#2@26"Process WK24Mac-Info.plist329612010#329612010#0(0"0(0#0#71"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac-Info.plist32932993185022052#356"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    builtin-infoPlistUtility WK24Mac-Info.plist -genpkginfo /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app/Contents/Info.plist0#
+
+CProcessPCH /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-adfptvsywzerqkcfgvwanjsdweum/WK24Mac_Prefix.pch.gch WK24Mac_Prefix.pch normal i386 c com.apple.compilers.gcc.4_2
+s329612016.037690
+e329612016.193450
+r1
+xProcessPCH
+x/var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-adfptvsywzerqkcfgvwanjsdweum/WK24Mac_Prefix.pch.gch
+xWK24Mac_Prefix.pch
+xnormal
+xi386
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@29"Precompile WK24Mac_Prefix.pch329612016#329612016#0(0"0(0#0#71"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac_Prefix.pch8602723392#1516"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c-header -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources/i386 -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac_Prefix.pch -o /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-adfptvsywzerqkcfgvwanjsdweum/WK24Mac_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-ceovipwuhpwchpcmxyrunnxssjde/WK24Mac_Prefix.pch.gch WK24Mac_Prefix.pch normal ppc c com.apple.compilers.gcc.4_2
+s329612016.193617
+e329612016.790282
+r1
+xProcessPCH
+x/var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-ceovipwuhpwchpcmxyrunnxssjde/WK24Mac_Prefix.pch.gch
+xWK24Mac_Prefix.pch
+xnormal
+xppc
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@29"Precompile WK24Mac_Prefix.pch329612016#329612016#0(0"0(0#0#71"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac_Prefix.pch8608042624#1524"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c-header -arch ppc -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mtune=G5 -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources/ppc -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac_Prefix.pch -o /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-ceovipwuhpwchpcmxyrunnxssjde/WK24Mac_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fohrshslublvwihinnylusvhtpuj/WK24Mac_Prefix.pch.gch WK24Mac_Prefix.pch normal x86_64 c com.apple.compilers.gcc.4_2
+s329612011.717899
+e329612011.852829
+r1
+xProcessPCH
+x/var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fohrshslublvwihinnylusvhtpuj/WK24Mac_Prefix.pch.gch
+xWK24Mac_Prefix.pch
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@29"Precompile WK24Mac_Prefix.pch329612011#329612011#0(0"0(0#0#71"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac_Prefix.pch8607877536#1520"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources/x86_64 -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac_Prefix.pch -o /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fohrshslublvwihinnylusvhtpuj/WK24Mac_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fudiqxllploymlepoglgegnngirq/WK24Mac_Prefix.pch.gch WK24Mac_Prefix.pch normal ppc objective-c com.apple.compilers.gcc.4_2
+s329612016.184310
+e329612019.256938
+r1
+xProcessPCH
+x/var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fudiqxllploymlepoglgegnngirq/WK24Mac_Prefix.pch.gch
+xWK24Mac_Prefix.pch
+xnormal
+xppc
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@29"Precompile WK24Mac_Prefix.pch329612016#329612019#0(0"0(0#0#71"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac_Prefix.pch8608099840#1544"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch ppc -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -fobjc-gc -mtune=G5 -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources/ppc -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac_Prefix.pch -o /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fudiqxllploymlepoglgegnngirq/WK24Mac_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fwyinmojfhozqrgzeberggqyoiuq/WK24Mac_Prefix.pch.gch WK24Mac_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s329612011.716982
+e329612016.184188
+r1
+xProcessPCH
+x/var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fwyinmojfhozqrgzeberggqyoiuq/WK24Mac_Prefix.pch.gch
+xWK24Mac_Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@29"Precompile WK24Mac_Prefix.pch329612011#329612016#0(0"0(0#0#71"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac_Prefix.pch8607941312#1540"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -fobjc-gc -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources/x86_64 -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac_Prefix.pch -o /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-fwyinmojfhozqrgzeberggqyoiuq/WK24Mac_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-guekncqvpsakyibttttpufugpqhr/WK24Mac_Prefix.pch.gch WK24Mac_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s329612011.852937
+e329612016.037504
+r1
+xProcessPCH
+x/var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-guekncqvpsakyibttttpufugpqhr/WK24Mac_Prefix.pch.gch
+xWK24Mac_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@29"Precompile WK24Mac_Prefix.pch329612011#329612016#0(0"0(0#0#71"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac_Prefix.pch8607200960#1536"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -mdynamic-no-pic -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -fobjc-gc -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources/i386 -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Release/WK24Mac.build/DerivedSources -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac_Prefix.pch -o /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-guekncqvpsakyibttttpufugpqhr/WK24Mac_Prefix.pch.gch0#
+
+CTouch /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app
+s329612022.289681
+e329612022.292512
+r1
+xTouch
+x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app
+lSLF07#2@84"Touch /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app329612022#329612022#0(0"0(0#0#0"8603625568#161"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    /usr/bin/touch -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Release/WK24Mac.app0#
+

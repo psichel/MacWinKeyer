@@ -1,0 +1,159 @@
+// !$*UTF8*$!
+{
+	256AC3D80F4B6AC300CF3369 /* WK24MacAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {614, 2535}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{4880, 1756}";
+			sepNavWindowFrame = "{{15, 120}, {667, 753}}";
+		};
+	};
+	256AC3D90F4B6AC300CF3369 /* WK24MacAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {810, 18902}}";
+			sepNavSelRange = "{12631, 0}";
+			sepNavVisRange = "{12350, 354}";
+			sepNavWindowFrame = "{{15, 120}, {667, 753}}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = C31A96B91364C6BF004DA051 /* WK24Mac */;
+		activeTarget = 8D1107260486CEB800E47090 /* WK24Mac */;
+		codeSenseManager = C31A96D01364C6CC004DA051 /* Code sense */;
+		executables = (
+			C31A96B91364C6BF004DA051 /* WK24Mac */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					341,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 328186384;
+			PBXWorkspaceStateSaveDate = 328186384;
+		};
+		perUserProjectItems = {
+			C3588D5F138FBD3F00EC6BB0 /* PlistBookmark */ = C3588D5F138FBD3F00EC6BB0 /* PlistBookmark */;
+			C3992595138F9A0400AE08B6 /* PBXTextBookmark */ = C3992595138F9A0400AE08B6 /* PBXTextBookmark */;
+			C39925A5138F9E9400AE08B6 /* PlistBookmark */ = C39925A5138F9E9400AE08B6 /* PlistBookmark */;
+		};
+		sourceControlManager = C31A96CF1364C6CC004DA051 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D1107260486CEB800E47090 /* WK24Mac */ = {
+		activeExec = 0;
+		executables = (
+			C31A96B91364C6BF004DA051 /* WK24Mac */,
+		);
+	};
+	C31A96B91364C6BF004DA051 /* WK24Mac */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = WK24Mac;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	C31A96CF1364C6CC004DA051 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	C31A96D01364C6CC004DA051 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	C3588D5F138FBD3F00EC6BB0 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = D7059DCC135355C300E32709 /* AppData.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			LOCK,
+		);
+		name = /Users/jamestrogers/Development/WK24Mac/AppData.plist;
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	C3953846138F32B80033C63D /* WK24MacAppDelegate.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = WK24MacAppDelegate.m;
+		path = /Users/jamestrogers/Development/WK24Mac/WK24MacAppDelegate.m;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {810, 18902}}";
+			sepNavSelRange = "{12631, 0}";
+			sepNavVisRange = "{12350, 354}";
+			sepNavWindowFrame = "{{15, 120}, {667, 753}}";
+		};
+	};
+	C3992595138F9A0400AE08B6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C3953846138F32B80033C63D /* WK24MacAppDelegate.m */;
+		name = "WK24MacAppDelegate.m: 153";
+		rLen = 0;
+		rLoc = 5757;
+		rType = 0;
+		vrLen = 649;
+		vrLoc = 5504;
+	};
+	C39925A5138F9E9400AE08B6 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = D7059DCC135355C300E32709 /* AppData.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			LOCK,
+		);
+		name = /Users/jamestrogers/Development/WK24Mac/AppData.plist;
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+}

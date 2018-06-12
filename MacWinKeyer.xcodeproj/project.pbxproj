@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		58656646B61B4CDAE7030169 /* Pods_MacWinKeyer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC21B1DF8054214B50D87DD /* Pods_MacWinKeyer.framework */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		AD5A564C1EA63F7D00F71F9E /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = AD5A564B1EA63F7D00F71F9E /* dsa_pub.pem */; };
+		AD98926F1AA9D50E00C970B7 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = AD98926E1AA9D50E00C970B7 /* Preferences.m */; };
+		ADA1934E1AABAB5600DC5C29 /* Credits.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = ADA1934C1AABAB5600DC5C29 /* Credits.rtfd */; };
+		ADA193521AAC906900DC5C29 /* WinKeyerRegisters.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA193511AAC906900DC5C29 /* WinKeyerRegisters.m */; };
+		ADA7320C1A98CD0D0075A598 /* WinKeyerConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA732091A98CD0D0075A598 /* WinKeyerConstants.m */; };
+		ADA732251A9A2DA10075A598 /* MacWinKeyer.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA732241A9A2DA10075A598 /* MacWinKeyer.m */; };
+		ADA732271A9A2FBC0075A598 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA732261A9A2FBC0075A598 /* Media.xcassets */; };
+		ADCA2D391E4A7087000E332F /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCA2D381E4A7087000E332F /* IOKit.framework */; };
+		ADDA22301BADB43E009C8DA0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDA222F1BADB43E009C8DA0 /* Cocoa.framework */; };
+		ADE760DE1EA93B0600FFE2DB /* WinKeyerHostModePreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE760DD1EA93B0600FFE2DB /* WinKeyerHostModePreferences.m */; };
+		ADE760E11EA93DCF00FFE2DB /* WinKeyerHostModePreferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE760DF1EA93DCF00FFE2DB /* WinKeyerHostModePreferences.xib */; };
+		ADE760E61EA9417C00FFE2DB /* PreferencesWinKeyerIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE760E21EA9417C00FFE2DB /* PreferencesWinKeyerIcon.png */; };
+		ADE760E71EA9417C00FFE2DB /* PreferencesWinKeyerIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE760E41EA9417C00FFE2DB /* PreferencesWinKeyerIcon@2x.png */; };
+		ADF63C311AAB5CA900B47BA2 /* StandaloneSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF4D6AF1AA0B53600034130 /* StandaloneSettings.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0EC21B1DF8054214B50D87DD /* Pods_MacWinKeyer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacWinKeyer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		100B15391D30432B1DF4EEF2 /* Pods-MacWinKeyer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacWinKeyer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacWinKeyer/Pods-MacWinKeyer.debug.xcconfig"; sourceTree = "<group>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* MacWinKeyer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacWinKeyer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD5A564B1EA63F7D00F71F9E /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		AD98926D1AA9D50E00C970B7 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Preferences.h; path = Classes/Preferences.h; sourceTree = "<group>"; };
+		AD98926E1AA9D50E00C970B7 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Preferences.m; path = Classes/Preferences.m; sourceTree = "<group>"; };
+		ADA1934D1AABAB5600DC5C29 /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.rtfd; name = English; path = English.lproj/Credits.rtfd; sourceTree = "<group>"; };
+		ADA193501AAC904800DC5C29 /* WinKeyerRegisters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WinKeyerRegisters.h; path = Classes/WinKeyerRegisters.h; sourceTree = "<group>"; };
+		ADA193511AAC906900DC5C29 /* WinKeyerRegisters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WinKeyerRegisters.m; path = Classes/WinKeyerRegisters.m; sourceTree = "<group>"; };
+		ADA732081A98CD0D0075A598 /* WinKeyerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WinKeyerConstants.h; path = Classes/WinKeyerConstants.h; sourceTree = "<group>"; };
+		ADA732091A98CD0D0075A598 /* WinKeyerConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WinKeyerConstants.m; path = Classes/WinKeyerConstants.m; sourceTree = "<group>"; };
+		ADA7321D1A9A22570075A598 /* MacWinKeyer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MacWinKeyer-Info.plist"; sourceTree = "<group>"; };
+		ADA732231A9A2DA10075A598 /* MacWinKeyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacWinKeyer.h; path = Classes/MacWinKeyer.h; sourceTree = "<group>"; };
+		ADA732241A9A2DA10075A598 /* MacWinKeyer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MacWinKeyer.m; path = Classes/MacWinKeyer.m; sourceTree = "<group>"; };
+		ADA732261A9A2FBC0075A598 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		ADA9FE231AAA07F200553FFB /* WinKeyerTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WinKeyerTypes.h; path = Classes/WinKeyerTypes.h; sourceTree = "<group>"; };
+		ADCA2D381E4A7087000E332F /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		ADDA222F1BADB43E009C8DA0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		ADE760DC1EA93B0600FFE2DB /* WinKeyerHostModePreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinKeyerHostModePreferences.h; sourceTree = "<group>"; };
+		ADE760DD1EA93B0600FFE2DB /* WinKeyerHostModePreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinKeyerHostModePreferences.m; sourceTree = "<group>"; };
+		ADE760E01EA93DCF00FFE2DB /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/WinKeyerHostModePreferences.xib; sourceTree = "<group>"; };
+		ADE760E31EA9417C00FFE2DB /* English */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = English; path = English.lproj/PreferencesWinKeyerIcon.png; sourceTree = "<group>"; };
+		ADE760E51EA9417C00FFE2DB /* English */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = English; path = "English.lproj/PreferencesWinKeyerIcon@2x.png"; sourceTree = "<group>"; };
+		ADF4D6AE1AA0B53600034130 /* StandaloneSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StandaloneSettings.h; path = Classes/StandaloneSettings.h; sourceTree = "<group>"; };
+		ADF4D6AF1AA0B53600034130 /* StandaloneSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StandaloneSettings.m; path = Classes/StandaloneSettings.m; sourceTree = "<group>"; };
+		E5AF1F4493B131155A321868 /* Pods-MacWinKeyer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacWinKeyer.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacWinKeyer/Pods-MacWinKeyer.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADCA2D391E4A7087000E332F /* IOKit.framework in Frameworks */,
+				ADDA22301BADB43E009C8DA0 /* Cocoa.framework in Frameworks */,
+				58656646B61B4CDAE7030169 /* Pods_MacWinKeyer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ADA732231A9A2DA10075A598 /* MacWinKeyer.h */,
+				ADA732241A9A2DA10075A598 /* MacWinKeyer.m */,
+				AD98926D1AA9D50E00C970B7 /* Preferences.h */,
+				AD98926E1AA9D50E00C970B7 /* Preferences.m */,
+				ADF4D6AE1AA0B53600034130 /* StandaloneSettings.h */,
+				ADF4D6AF1AA0B53600034130 /* StandaloneSettings.m */,
+				ADA732081A98CD0D0075A598 /* WinKeyerConstants.h */,
+				ADA732091A98CD0D0075A598 /* WinKeyerConstants.m */,
+				ADA193501AAC904800DC5C29 /* WinKeyerRegisters.h */,
+				ADA193511AAC906900DC5C29 /* WinKeyerRegisters.m */,
+				ADA9FE231AAA07F200553FFB /* WinKeyerTypes.h */,
+				ADE760DC1EA93B0600FFE2DB /* WinKeyerHostModePreferences.h */,
+				ADE760DD1EA93B0600FFE2DB /* WinKeyerHostModePreferences.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* MacWinKeyer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* WK24Mac */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				697297E0D899CD1AC2D39BE1 /* Pods */,
+			);
+			name = WK24Mac;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ADE760E21EA9417C00FFE2DB /* PreferencesWinKeyerIcon.png */,
+				ADE760E41EA9417C00FFE2DB /* PreferencesWinKeyerIcon@2x.png */,
+				AD5A564B1EA63F7D00F71F9E /* dsa_pub.pem */,
+				ADA1934C1AABAB5600DC5C29 /* Credits.rtfd */,
+				ADA732261A9A2FBC0075A598 /* Media.xcassets */,
+				ADA7321D1A9A22570075A598 /* MacWinKeyer-Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				ADE760DF1EA93DCF00FFE2DB /* WinKeyerHostModePreferences.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ADCA2D381E4A7087000E332F /* IOKit.framework */,
+				ADDA222F1BADB43E009C8DA0 /* Cocoa.framework */,
+				0EC21B1DF8054214B50D87DD /* Pods_MacWinKeyer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		697297E0D899CD1AC2D39BE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				100B15391D30432B1DF4EEF2 /* Pods-MacWinKeyer.debug.xcconfig */,
+				E5AF1F4493B131155A321868 /* Pods-MacWinKeyer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* MacWinKeyer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "MacWinKeyer" */;
+			buildPhases = (
+				6631C6095A5DD688DEC40B8D /* [CP] Check Pods Manifest.lock */,
+				ADA1934F1AABB22F00DC5C29 /* Bump Build Number */,
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				BBB170C3B9BC57BCBAA4E933 /* [CP] Embed Pods Frameworks */,
+				76BDF4D169708DF4928529CA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacWinKeyer;
+			productInstallPath = "$(HOME)/Applications";
+			productName = WK24Mac;
+			productReference = 8D1107320486CEB800E47090 /* MacWinKeyer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				TargetAttributes = {
+					8D1107260486CEB800E47090 = {
+						DevelopmentTeam = AEWAQH5M9P;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MacWinKeyer" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* WK24Mac */;
+			productRefGroup = 19C28FACFE9D520D11CA2CBB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* MacWinKeyer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADE760E61EA9417C00FFE2DB /* PreferencesWinKeyerIcon.png in Resources */,
+				AD5A564C1EA63F7D00F71F9E /* dsa_pub.pem in Resources */,
+				ADA1934E1AABAB5600DC5C29 /* Credits.rtfd in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				ADE760E71EA9417C00FFE2DB /* PreferencesWinKeyerIcon@2x.png in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				ADE760E11EA93DCF00FFE2DB /* WinKeyerHostModePreferences.xib in Resources */,
+				ADA732271A9A2FBC0075A598 /* Media.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6631C6095A5DD688DEC40B8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		76BDF4D169708DF4928529CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacWinKeyer/Pods-MacWinKeyer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADA1934F1AABB22F00DC5C29 /* Bump Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bump Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "#!/bin/bash\nbN=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbN=$((bN += 1))\nbN=$(printf \"%d\" $bN)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bN\" \"$INFOPLIST_FILE\"\necho \"Build Version =\" $bN";
+		};
+		BBB170C3B9BC57BCBAA4E933 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacWinKeyer/Pods-MacWinKeyer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA7320C1A98CD0D0075A598 /* WinKeyerConstants.m in Sources */,
+				ADF63C311AAB5CA900B47BA2 /* StandaloneSettings.m in Sources */,
+				ADA732251A9A2DA10075A598 /* MacWinKeyer.m in Sources */,
+				ADE760DE1EA93B0600FFE2DB /* WinKeyerHostModePreferences.m in Sources */,
+				AD98926F1AA9D50E00C970B7 /* Preferences.m in Sources */,
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				ADA193521AAC906900DC5C29 /* WinKeyerRegisters.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		ADA1934C1AABAB5600DC5C29 /* Credits.rtfd */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADA1934D1AABAB5600DC5C29 /* English */,
+			);
+			name = Credits.rtfd;
+			sourceTree = "<group>";
+		};
+		ADE760DF1EA93DCF00FFE2DB /* WinKeyerHostModePreferences.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADE760E01EA93DCF00FFE2DB /* English */,
+			);
+			name = WinKeyerHostModePreferences.xib;
+			sourceTree = "<group>";
+		};
+		ADE760E21EA9417C00FFE2DB /* PreferencesWinKeyerIcon.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADE760E31EA9417C00FFE2DB /* English */,
+			);
+			name = PreferencesWinKeyerIcon.png;
+			sourceTree = "<group>";
+		};
+		ADE760E41EA9417C00FFE2DB /* PreferencesWinKeyerIcon@2x.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADE760E51EA9417C00FFE2DB /* English */,
+			);
+			name = "PreferencesWinKeyerIcon@2x.png";
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 100B15391D30432B1DF4EEF2 /* Pods-MacWinKeyer.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = AEWAQH5M9P;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.k1gq.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = MacWinKeyer;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5AF1F4493B131155A321868 /* Pods-MacWinKeyer.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = AEWAQH5M9P;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.k1gq.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = MacWinKeyer;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_ENABLE_OBJC_GC = "";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "MacWinKeyer-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_ENABLE_OBJC_GC = "";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "MacWinKeyer-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "MacWinKeyer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MacWinKeyer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

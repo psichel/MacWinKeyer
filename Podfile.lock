@@ -1,0 +1,18 @@
+PODS:
+  - CCNPreferencesWindowController (1.4.3)
+  - ORSSerialPort (2.0.2)
+  - Sparkle (1.17.0)
+
+DEPENDENCIES:
+  - CCNPreferencesWindowController
+  - ORSSerialPort
+  - Sparkle
+
+SPEC CHECKSUMS:
+  CCNPreferencesWindowController: e89fc1d448197c6d20e995a4d6488142cae529f5
+  ORSSerialPort: 3fb0d2404b7e8b99c4f1aa7e7314d63030cd54c3
+  Sparkle: ccfb47699feea7b40b51cf3176f69404e5b1da6c
+
+PODFILE CHECKSUM: 4e856d3d248995692471c02b1da66eab2c876fea
+
+COCOAPODS: 1.2.0
