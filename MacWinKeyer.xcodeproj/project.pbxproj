@@ -21,7 +21,6 @@
 		ADCA2D391E4A7087000E332F /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCA2D381E4A7087000E332F /* IOKit.framework */; };
 		ADDA22301BADB43E009C8DA0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDA222F1BADB43E009C8DA0 /* Cocoa.framework */; };
 		ADE760DE1EA93B0600FFE2DB /* WinKeyerHostModePreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE760DD1EA93B0600FFE2DB /* WinKeyerHostModePreferences.m */; };
-		ADE760E11EA93DCF00FFE2DB /* WinKeyerHostModePreferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADE760DF1EA93DCF00FFE2DB /* WinKeyerHostModePreferences.xib */; };
 		ADE760E61EA9417C00FFE2DB /* PreferencesWinKeyerIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE760E21EA9417C00FFE2DB /* PreferencesWinKeyerIcon.png */; };
 		ADE760E71EA9417C00FFE2DB /* PreferencesWinKeyerIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE760E41EA9417C00FFE2DB /* PreferencesWinKeyerIcon@2x.png */; };
 		ADF63C311AAB5CA900B47BA2 /* StandaloneSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF4D6AF1AA0B53600034130 /* StandaloneSettings.m */; };
@@ -51,7 +50,6 @@
 		ADDA222F1BADB43E009C8DA0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		ADE760DC1EA93B0600FFE2DB /* WinKeyerHostModePreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinKeyerHostModePreferences.h; sourceTree = "<group>"; };
 		ADE760DD1EA93B0600FFE2DB /* WinKeyerHostModePreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinKeyerHostModePreferences.m; sourceTree = "<group>"; };
-		ADE760E01EA93DCF00FFE2DB /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/WinKeyerHostModePreferences.xib; sourceTree = "<group>"; };
 		ADE760E31EA9417C00FFE2DB /* English */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = English; path = English.lproj/PreferencesWinKeyerIcon.png; sourceTree = "<group>"; };
 		ADE760E51EA9417C00FFE2DB /* English */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = English; path = "English.lproj/PreferencesWinKeyerIcon@2x.png"; sourceTree = "<group>"; };
 		ADF4D6AE1AA0B53600034130 /* StandaloneSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StandaloneSettings.h; path = Classes/StandaloneSettings.h; sourceTree = "<group>"; };
@@ -101,7 +99,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		29B97314FDCFA39411CA2CEA = {
+		29B97314FDCFA39411CA2CEA /* WK24Mac */ = {
 			isa = PBXGroup;
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -133,7 +131,6 @@
 				ADA7321D1A9A22570075A598 /* MacWinKeyer-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
-				ADE760DF1EA93DCF00FFE2DB /* WinKeyerHostModePreferences.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -187,7 +184,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1000;
 				TargetAttributes = {
 					8D1107260486CEB800E47090 = {
 						DevelopmentTeam = AEWAQH5M9P;
@@ -205,7 +202,7 @@
 				French,
 				German,
 			);
-			mainGroup = 29B97314FDCFA39411CA2CEA;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* WK24Mac */;
 			productRefGroup = 19C28FACFE9D520D11CA2CBB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -226,7 +223,6 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				ADE760E71EA9417C00FFE2DB /* PreferencesWinKeyerIcon@2x.png in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
-				ADE760E11EA93DCF00FFE2DB /* WinKeyerHostModePreferences.xib in Resources */,
 				ADA732271A9A2FBC0075A598 /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,14 +330,6 @@
 			name = Credits.rtfd;
 			sourceTree = "<group>";
 		};
-		ADE760DF1EA93DCF00FFE2DB /* WinKeyerHostModePreferences.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ADE760E01EA93DCF00FFE2DB /* English */,
-			);
-			name = WinKeyerHostModePreferences.xib;
-			sourceTree = "<group>";
-		};
 		ADE760E21EA9417C00FFE2DB /* PreferencesWinKeyerIcon.png */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -410,11 +398,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -451,11 +441,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
