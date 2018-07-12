@@ -677,6 +677,7 @@
                                         @"!": @"KW", // New
                                         @"_": @"UK", // New
                                         @"&": @"AS", // New
+                                        @"^": @"FT", // For N9SE
                                         @"]": @"AA", // Prosign
                                         @"`": @"HH", // Prosign
                                         @"{": @"SN", // Prosign
