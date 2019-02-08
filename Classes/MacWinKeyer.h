@@ -24,8 +24,6 @@
     BOOL _suppressEchoTestCharacterDisplay;
 }
 
-@property CCNPreferencesWindowController* preferencesController;
-
 @property BOOL waitState;
 @property BOOL busyState;
 @property BOOL paddleBreakinState;

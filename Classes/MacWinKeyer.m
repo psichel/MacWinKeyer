@@ -7,7 +7,6 @@
 //
 
 #import "MacWinKeyer.h"
-@import CCNPreferencesWindowController;
 @import ORSSerial;
 @import Sparkle;
 #import "StandaloneSettings.h"
@@ -143,12 +142,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-//    // Insert code here to initialize your application
-//    self.preferencesController = [CCNPreferencesWindowController new];
-//    [self.preferencesController setPreferencesViewControllers:@[
-//                                                               [WinKeyerHostModePreferences new]
-//                                                               ]];
-    
     self.serialPortManager = [ORSSerialPortManager sharedSerialPortManager];
     
     NSString* portName = [[NSUserDefaults standardUserDefaults] stringForKey:winKeyerPortNamePreferenceKey];
@@ -247,11 +240,6 @@
 }
 
 #pragma mark - Actions
-
-- (IBAction)showPreferencesWindow:(id)sender
-{
-    [self.preferencesController showPreferencesWindow];
-}
 
 - (IBAction)openWebSite:(id)sender
 {

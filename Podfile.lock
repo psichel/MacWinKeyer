@@ -1,24 +1,20 @@
 PODS:
-  - CCNPreferencesWindowController (1.4.3)
   - ORSSerialPort (2.0.2)
-  - Sparkle (1.19.0)
+  - Sparkle (1.21.2)
 
 DEPENDENCIES:
-  - CCNPreferencesWindowController
   - ORSSerialPort
   - Sparkle
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - CCNPreferencesWindowController
     - ORSSerialPort
     - Sparkle
 
 SPEC CHECKSUMS:
-  CCNPreferencesWindowController: e89fc1d448197c6d20e995a4d6488142cae529f5
   ORSSerialPort: 3fb0d2404b7e8b99c4f1aa7e7314d63030cd54c3
-  Sparkle: 8486d2493599665e466b5076e72b28849776e32f
+  Sparkle: 1678d4707e7665960c7d1b43aca125e6392d11c4
 
-PODFILE CHECKSUM: 4e856d3d248995692471c02b1da66eab2c876fea
+PODFILE CHECKSUM: f91d75b2b1fb7174348e7a1bbc7acd3e9daa0199
 
 COCOAPODS: 1.5.3
