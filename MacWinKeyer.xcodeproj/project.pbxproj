@@ -20,7 +20,6 @@
 		ADA732271A9A2FBC0075A598 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA732261A9A2FBC0075A598 /* Media.xcassets */; };
 		ADCA2D391E4A7087000E332F /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCA2D381E4A7087000E332F /* IOKit.framework */; };
 		ADDA22301BADB43E009C8DA0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDA222F1BADB43E009C8DA0 /* Cocoa.framework */; };
-		ADE760DE1EA93B0600FFE2DB /* WinKeyerHostModePreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE760DD1EA93B0600FFE2DB /* WinKeyerHostModePreferences.m */; };
 		ADE760E61EA9417C00FFE2DB /* PreferencesWinKeyerIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE760E21EA9417C00FFE2DB /* PreferencesWinKeyerIcon.png */; };
 		ADE760E71EA9417C00FFE2DB /* PreferencesWinKeyerIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADE760E41EA9417C00FFE2DB /* PreferencesWinKeyerIcon@2x.png */; };
 		ADF63C311AAB5CA900B47BA2 /* StandaloneSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = ADF4D6AF1AA0B53600034130 /* StandaloneSettings.m */; };
@@ -48,8 +47,6 @@
 		ADA9FE231AAA07F200553FFB /* WinKeyerTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WinKeyerTypes.h; path = Classes/WinKeyerTypes.h; sourceTree = "<group>"; };
 		ADCA2D381E4A7087000E332F /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		ADDA222F1BADB43E009C8DA0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		ADE760DC1EA93B0600FFE2DB /* WinKeyerHostModePreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinKeyerHostModePreferences.h; sourceTree = "<group>"; };
-		ADE760DD1EA93B0600FFE2DB /* WinKeyerHostModePreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinKeyerHostModePreferences.m; sourceTree = "<group>"; };
 		ADE760E31EA9417C00FFE2DB /* English */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = English; path = English.lproj/PreferencesWinKeyerIcon.png; sourceTree = "<group>"; };
 		ADE760E51EA9417C00FFE2DB /* English */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = English; path = "English.lproj/PreferencesWinKeyerIcon@2x.png"; sourceTree = "<group>"; };
 		ADF4D6AE1AA0B53600034130 /* StandaloneSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StandaloneSettings.h; path = Classes/StandaloneSettings.h; sourceTree = "<group>"; };
@@ -85,8 +82,6 @@
 				ADA193501AAC904800DC5C29 /* WinKeyerRegisters.h */,
 				ADA193511AAC906900DC5C29 /* WinKeyerRegisters.m */,
 				ADA9FE231AAA07F200553FFB /* WinKeyerTypes.h */,
-				ADE760DC1EA93B0600FFE2DB /* WinKeyerHostModePreferences.h */,
-				ADE760DD1EA93B0600FFE2DB /* WinKeyerHostModePreferences.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -296,7 +291,6 @@
 				ADA7320C1A98CD0D0075A598 /* WinKeyerConstants.m in Sources */,
 				ADF63C311AAB5CA900B47BA2 /* StandaloneSettings.m in Sources */,
 				ADA732251A9A2DA10075A598 /* MacWinKeyer.m in Sources */,
-				ADE760DE1EA93B0600FFE2DB /* WinKeyerHostModePreferences.m in Sources */,
 				AD98926F1AA9D50E00C970B7 /* Preferences.m in Sources */,
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				ADA193521AAC906900DC5C29 /* WinKeyerRegisters.m in Sources */,

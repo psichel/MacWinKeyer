@@ -12,7 +12,6 @@
 @import Sparkle;
 #import "StandaloneSettings.h"
 #import "WinKeyerConstants.h"
-#import "WinKeyerHostModePreferences.h"
 #import "WinKeyerRegisters.h"
 #import "WinKeyerTypes.h"
 #import "Preferences.h"
@@ -144,11 +143,11 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
-    self.preferencesController = [CCNPreferencesWindowController new];
-    [self.preferencesController setPreferencesViewControllers:@[
-                                                               [WinKeyerHostModePreferences new]
-                                                               ]];
+//    // Insert code here to initialize your application
+//    self.preferencesController = [CCNPreferencesWindowController new];
+//    [self.preferencesController setPreferencesViewControllers:@[
+//                                                               [WinKeyerHostModePreferences new]
+//                                                               ]];
     
     self.serialPortManager = [ORSSerialPortManager sharedSerialPortManager];
     
@@ -665,7 +664,7 @@
     NSString* remappedString = [self remapString:string];
     NSString* stringToSend = remappedString.uppercaseString;
     NSData* dataToSend = [stringToSend dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-    //NSLog(@"Sending '%@'", dataToSend);
+//    NSLog(@"Sending '%@'", dataToSend);
     [self.winkeyerPort sendData:dataToSend];
 }
 

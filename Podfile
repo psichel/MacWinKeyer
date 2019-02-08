@@ -8,6 +8,6 @@ target 'MacWinKeyer' do
   # Pods for MacWinKeyer
   pod 'ORSSerialPort'
   pod 'Sparkle'
-  pod 'CCNPreferencesWindowController'
+  #  pod 'CCNPreferencesWindowController'
   
 end
