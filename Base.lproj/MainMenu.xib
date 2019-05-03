@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.59" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.59"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,18 +26,6 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Check for Updates…" id="egP-Wu-eFz">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <action selector="checkForUpdates:" target="Seo-DX-Et1" id="okp-BI-3J7"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="Automatically Check for Updates" id="fcD-WC-TDT">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <connections>
-                                    <binding destination="Seo-DX-Et1" name="value" keyPath="self.automaticallyChecksForUpdates" id="35Q-G0-LYe"/>
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="236">
@@ -4743,11 +4731,6 @@ Gw
                 <outlet property="_tabView" destination="591" id="Kpz-B6-kmA"/>
                 <outlet property="_tuneButton" destination="628" id="3Lx-9Y-g3v"/>
                 <outlet property="oKeyerPortSelection" destination="918" id="924"/>
-            </connections>
-        </customObject>
-        <customObject id="Seo-DX-Et1" customClass="SUUpdater">
-            <connections>
-                <outlet property="delegate" destination="494" id="bpk-Sw-SPI"/>
             </connections>
         </customObject>
         <customObject id="B7E-n6-Tgb" customClass="StandaloneSettings"/>

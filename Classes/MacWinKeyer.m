@@ -8,7 +8,6 @@
 
 #import "MacWinKeyer.h"
 @import ORSSerial;
-@import Sparkle;
 #import "StandaloneSettings.h"
 #import "WinKeyerConstants.h"
 #import "WinKeyerRegisters.h"
@@ -137,7 +136,7 @@
 
 - (void)applicationWillFinishLaunching:(NSNotification *)notification
 {
-    [SUUpdater sharedUpdater].automaticallyChecksForUpdates = NO;
+//    [SUUpdater sharedUpdater].automaticallyChecksForUpdates = NO;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
