@@ -35,6 +35,7 @@
 		AD3A5003220E435D00471E24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AD3A5004220E435D00471E24 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/PreferencesWinKeyerIcon.png; sourceTree = "<group>"; };
 		AD3A5005220E435E00471E24 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "en.lproj/PreferencesWinKeyerIcon@2x.png"; sourceTree = "<group>"; };
+		AD4745AE227CC45A000D4171 /* MacWinKeyer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacWinKeyer.entitlements; sourceTree = "<group>"; };
 		AD5A564B1EA63F7D00F71F9E /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		AD98926D1AA9D50E00C970B7 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Preferences.h; path = Classes/Preferences.h; sourceTree = "<group>"; };
 		AD98926E1AA9D50E00C970B7 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Preferences.m; path = Classes/Preferences.m; sourceTree = "<group>"; };
@@ -97,6 +98,7 @@
 		29B97314FDCFA39411CA2CEA /* WK24Mac */ = {
 			isa = PBXGroup;
 			children = (
+				AD4745AE227CC45A000D4171 /* MacWinKeyer.entitlements */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -184,6 +186,11 @@
 					8D1107260486CEB800E47090 = {
 						DevelopmentTeam = AEWAQH5M9P;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HardenedRuntime = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -351,6 +358,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INSTALL_PATH = "$(HOME)/Applications";
@@ -373,6 +381,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
