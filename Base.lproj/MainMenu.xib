@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14845" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14810.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14845"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -394,7 +394,7 @@
                     </menu>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="-714" y="-832"/>
+            <point key="canvasLocation" x="-1186" y="-908"/>
         </menu>
         <window title="MacWinKeyer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" frameAutosaveName="MacWinKeyerWindow" animationBehavior="default" id="371" userLabel="MacWinKeyer Window">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
@@ -458,7 +458,7 @@
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Keyer" identifier="1" id="592" userLabel="Host Mode Keyer">
-                                <view key="view" id="595">
+                                <view key="view" ambiguous="YES" id="595">
                                     <rect key="frame" x="0.0" y="0.0" width="519" height="665"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -763,6 +763,7 @@ Gw
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                         <connections>
+                                                            <action selector="changeSidetone:" target="494" id="ygL-KJ-u9l"/>
                                                             <binding destination="1997" name="value" keyPath="selection.SidetoneFrequency" id="T05-pc-cx9"/>
                                                             <binding destination="494" name="hidden" keyPath="self.version2" id="fCB-2K-rc6"/>
                                                         </connections>
@@ -1691,6 +1692,13 @@ Gw
                                             </view>
                                         </box>
                                     </subviews>
+                                    <connections>
+                                        <binding destination="494" name="hidden" keyPath="self.hostMode" id="RvJ-yM-atM">
+                                            <dictionary key="options">
+                                                <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                            </dictionary>
+                                        </binding>
+                                    </connections>
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Standalone Mode Settings" identifier="Item 2" id="596" userLabel="WK2 Standalone Mode Settings">
@@ -4595,7 +4603,7 @@ Gw
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Serial Port" identifier="serial_tab" id="602" userLabel="Serial Port Settings">
-                                <view key="view" ambiguous="YES" id="603">
+                                <view key="view" id="603">
                                     <rect key="frame" x="0.0" y="0.0" width="519" height="665"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>

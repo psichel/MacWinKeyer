@@ -102,10 +102,13 @@ void decodeWK2SidetoneRegisterIntoDict(uint8 sidetoneRegister, NSMutableDictiona
     preferences[SidetonePaddleOnly] = @(paddleOnly);
 }
 
-uint8 encodeWK3SidetoneRegisterFromDict(NSDictionary* preferences)
+uint8 encodeWK3SidetoneRegisterFromDict(NSMutableDictionary* preferences)
 {
     uint8 sidetoneRegister = 0x00;
     NSInteger sidetoneFrequency = [preferences[SidetoneFrequency] integerValue];
+    if (sidetoneFrequency < 500) {
+        sidetoneFrequency = 500;
+    }
     sidetoneRegister = 62500/sidetoneFrequency;
     return sidetoneRegister;
 }

@@ -20,6 +20,8 @@
 {
 	self = [super init];
 	if (self) {
+        self.version2 = YES; // default for hidden bindings
+        self.version3 = !self.version2;
         [NSApp activateIgnoringOtherApps:YES];
         [self addObserver:self forKeyPath:@"keyboardBufferString" options:NSKeyValueObservingOptionNew context:nil];
 	}
