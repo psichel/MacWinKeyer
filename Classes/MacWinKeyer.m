@@ -35,39 +35,23 @@
     self.paddleEchoString = @"";
     self.versionString = @"";
     self.portOpenCloseButtonTitle = @"Open Port";
-    [self changeStatusString:NO];
+    [self changeStatusString];
 }
 
-- (void)changeStatusString:(BOOL)isOpen
+- (void)changeStatusString
 {
-    self.availableStatus = NO;
-    self.partiallyAvailableStatus = NO;
-    self.unavailableStatus = YES;
-    if ([oKeyerPortSelection.titleOfSelectedItem isEqualToString:portNameNone]) {
-        self.statusString = @"No serial port";
-        self.versionString = @"";
-    } else {
-        if (isOpen) {
-            self.statusString = @"Port open";
-            self.statusString = [self.statusString stringByAppendingFormat:@" %@ keyer", self.versionString];
-        } else {
-            self.statusString = @"Port closed";
-            self.versionString = @"";
-        }
+    self.statusGumdropImage = [NSImage imageNamed:NSImageNameStatusUnavailable];
+    if (self.winkeyerPort.isOpen) {
+        self.statusString = [@"" stringByAppendingString:self.versionString];
         if (self.isHostMode) {
-            if (self.isVersion2) {
-                self.statusString = [self.statusString stringByAppendingString:@"; WK2 Host Mode"];
-            } else if (self.isVersion3) {
-                self.statusString = [self.statusString stringByAppendingString:@"; WK3 Host Mode"];
-            } else {
-                self.statusString = [self.statusString stringByAppendingString:@"; Host Mode"];
-            }
-            self.availableStatus = YES;
-            self.partiallyAvailableStatus = NO;
-            self.unavailableStatus = NO;
+            self.statusString = [self.statusString stringByAppendingString:@" Host Mode"];
+            self.statusGumdropImage = [NSImage imageNamed:NSImageNameStatusAvailable];
         } else {
-            self.statusString = [self.statusString stringByAppendingString:@"; Standalone Mode"];
+            self.statusString = [self.statusString stringByAppendingString:@" Standalone Mode"];
         }
+    } else {
+        self.statusString = @"";
+        self.versionString = @"";
     }
 }
 
@@ -146,7 +130,6 @@
     self.serialPortManager = [ORSSerialPortManager sharedSerialPortManager];
     
     NSString* portName = [[NSUserDefaults standardUserDefaults] stringForKey:winKeyerPortNamePreferenceKey];
-    [oKeyerPortSelection selectItemWithTitle:portName];
     NSArray* allPorts = [ORSSerialPortManager sharedSerialPortManager].availablePorts;
     for (ORSSerialPort* port in allPorts) {
         if ([port.name isEqualToString:portName]) {
@@ -154,12 +137,6 @@
             [self openOrCloseWinKeyer:self];
             break;
         }
-    }
-    if (!self.winkeyerPort.isOpen) {
-        [_tabSelectButton selectItemWithTitle:[NSString stringWithFormat:@"Serial Port Settings"]];
-        [_tabView selectTabViewItemWithIdentifier:@"serial_tab"];
-    } else {
-        ;// NSLog(@"%s portName = %@", __PRETTY_FUNCTION__, portName);
     }
 }
 
@@ -237,7 +214,7 @@
     if (!self.isHostMode) return;
     [self.winkeyerPort sendData:bytesToData(kWKAdminHostCloseCommand, 2)];
     self.hostMode = NO;
-    [self changeStatusString:NO];
+    [self changeStatusString];
 }
 
 #pragma mark - Actions
@@ -289,7 +266,6 @@
 	_keyboardBufferCharacterIndex = 0;
     const uint8 command[2] = {kWKImmediateClearBufferCommand, kWKImmediateRequestWinKeyer2StatusCommand};
     [self.winkeyerPort sendData:bytesToData(command, 2)];
-    _tuneButton.state = NSOffState;
     self.paddleEchoString = @"";
 }
 
@@ -357,12 +333,12 @@
         [self.winkeyerPort open];
         if (self.winkeyerPort.isOpen) {
             [self sendAsciiString:@"\r\r\r\r"];
-            [self changeStatusString:YES];
+            [self changeStatusString];
             self.portOpenCloseButtonTitle = @"Close Port";
             [[NSUserDefaults standardUserDefaults] setObject:self.winkeyerPort.name forKey:winKeyerPortNamePreferenceKey];
             [self openHostMode];
         } else {
-            [self changeStatusString:NO];
+            [self changeStatusString];
         }
     }
 }
@@ -550,36 +526,50 @@
 {
     NSLog(@"%s", __PRETTY_FUNCTION__);
     if (!self.winkeyerPort.isOpen) return;
-    [_busyReadWriteProgress startAnimation:self];
-    [self closeHostMode];
     const uint8 command[6] = {'\r', '\r', '\r', '\r', kWKAdminWriteEEPROMCommand[0], kWKAdminWriteEEPROMCommand[1]};
     NSMutableData* dataToSend = [NSMutableData dataWithData:bytesToData(command, 6)];
     if (self.isVersion2) {
+        [_busyReadWriteProgressWK2 startAnimation:self];
         [dataToSend appendData:[_standaloneSettings wk2EepromData]];
     } else if (self.isVersion3) {
+        [_busyReadWriteProgressWK3 startAnimation:self];
         [dataToSend appendData:[_standaloneSettings wk3EepromData]];
     } else {
         ; //TODO
     }
+    // Main loop so that progress indicator animates
+    [self performSelectorOnMainThread:@selector(closeHostModeAndSendData:) withObject:dataToSend waitUntilDone:YES];
+    // WK needs time to digest eeprom before we can reopen Host Mode
+    [self performSelector:@selector(reopenHostMode) withObject:nil afterDelay:5];
+}
+
+- (void)closeHostModeAndSendData:(NSData*)dataToSend
+{
+    [self closeHostMode];
     NSLog(@"%s send of %ld bytes started at %@", __PRETTY_FUNCTION__, dataToSend.length, [NSDate date]);
     [self.winkeyerPort sendData:dataToSend];
     NSLog(@"%s send ended at %@", __PRETTY_FUNCTION__, [NSDate date]);
-    sleep(4); // sendData blocks, but WK still needs time to digest eeprom before we can reopen Host Mode
+}
+
+- (void)reopenHostMode
+{
     [self openHostMode];
-    [_busyReadWriteProgress stopAnimation:self];
+    [_busyReadWriteProgressWK2 stopAnimation:self];
+    [_busyReadWriteProgressWK3 stopAnimation:self];
 }
 
 - (IBAction)readEeprom:(id)sender
 {
 //    NSLog(@"%s", __PRETTY_FUNCTION__);
     if (!self.winkeyerPort.isOpen) return;
-    [_busyReadWriteProgress startAnimation:self];
     NSDictionary* userInfo = nil;
     NSUInteger bytesToRead = 0;
     if (self.isVersion2) {
+        [_busyReadWriteProgressWK2 startAnimation:self];
         userInfo = @{@"CommandName": @"ReadWK2EEPROM"};
         bytesToRead = 256;
     } else {
+        [_busyReadWriteProgressWK3 startAnimation:self];
         userInfo = @{@"CommandName": @"ReadWK3EEPROM"};
         bytesToRead = 32 + 256;
     }
@@ -645,7 +635,6 @@
     sleep(2); // Give the port time to send the commands
     [self.winkeyerPort close];
     self.portOpenCloseButtonTitle = @"Open Port";
-    [self changeStatusString:NO];
 }
 
 - (void)sendAsciiString:(NSString *)string
@@ -696,9 +685,7 @@
             } else if ((v & 0xDC) == 0xDC) {
                 ; // Paddle released
             } else if ((v & 0xC0) == 0xC0) { // Status byte
-                self.availableStatus = YES;
-                self.partiallyAvailableStatus = NO;
-                self.unavailableStatus = NO;
+                self.statusGumdropImage = [NSImage imageNamed:NSImageNameStatusAvailable];
                 if (v & 0x08) { // Pushbutton status
                     NSUInteger buttonID = 0;
                     if (v & 0x01) buttonID = 1;
@@ -712,8 +699,7 @@
                     if (v & 0x10) {
                         //NSLog(@"Status : Wait");
                         self.waitState = YES;
-                        self.availableStatus = NO;
-                        self.unavailableStatus = YES;
+                        self.statusGumdropImage = [NSImage imageNamed:NSImageNameStatusUnavailable];
                     } else {
                         //NSLog(@"Status : Not Wait");
                         self.waitState = NO;
@@ -721,8 +707,7 @@
                     if (v & 0x04) {
                         //NSLog(@"Status : Busy");
                         self.busyState = YES;
-                        self.availableStatus = NO;
-                        self.partiallyAvailableStatus = YES;
+                        self.statusGumdropImage = [NSImage imageNamed:NSImageNameStatusPartiallyAvailable];
                     } else {
                         //NSLog(@"Status : Not Busy");
                         self.busyState = NO;
@@ -737,8 +722,7 @@
                     if (v & 0x01) {
                         //NSLog(@"Status : Xoff");
                         self.bufferNearlyFullState = YES;
-                        self.availableStatus = NO;
-                        self.unavailableStatus = YES;
+                        self.statusGumdropImage = [NSImage imageNamed:NSImageNameStatusUnavailable];
                     } else {
                         //NSLog(@"Status : Not Xoff");
                         self.bufferNearlyFullState = NO;
@@ -789,7 +773,7 @@
         uint8 versionNumber = ((uint8*)responseData.bytes)[0];
         NSInteger majorVersion = versionNumber / 10;
         NSInteger minorVersion = versionNumber - 10 * majorVersion;
-        self.versionString = [NSString stringWithFormat:@"Version: %1ld.%1ld", majorVersion, minorVersion];
+        self.versionString = [NSString stringWithFormat:@"WinKeyer version %1ld.%1ld", majorVersion, minorVersion];
         if (majorVersion >= 3 && majorVersion < 4) {
             self.version3 = YES;
             [self readMinorVersion];
@@ -827,17 +811,17 @@
         [self loadDefaults];
         [self.winkeyerPort sendData:byteToData(kWKImmediateGetSpeedPotCommand)];
         self.hostMode = YES;
-        [self changeStatusString:YES];
+        [self changeStatusString];
     } else if ([commandName isEqualToString:@"ReadWK2EEPROM"]) {
 //        NSLog(@"%s ReadWK2EEPROM response at %@", __PRETTY_FUNCTION__, [NSDate date]);
         [_standaloneSettings decodeWK2Eeprom:responseData];
         [self openHostMode];
-        [_busyReadWriteProgress stopAnimation:self];
+        [_busyReadWriteProgressWK2 stopAnimation:self];
     } else if ([commandName isEqualToString:@"ReadWK3EEPROM"]) {
 //        NSLog(@"%s ReadWK3EEPROM response at %@", __PRETTY_FUNCTION__, [NSDate date]);
         [_standaloneSettings decodeWK3Eeprom:responseData];
         [self openHostMode];
-        [_busyReadWriteProgress stopAnimation:self];
+        [_busyReadWriteProgressWK3 stopAnimation:self];
     } else {
         NSLog(@"%s unhandled request response name: %@", __PRETTY_FUNCTION__, commandName);
     }
@@ -845,7 +829,8 @@
 
 - (void)serialPort:(ORSSerialPort*)serialPort requestDidTimeout:(ORSSerialRequest*)request
 {
-    [_busyReadWriteProgress stopAnimation:self];
+    [_busyReadWriteProgressWK2 stopAnimation:self];
+    [_busyReadWriteProgressWK3 stopAnimation:self];
     NSString* errorDescription = [NSString stringWithFormat:@"WinKeyer command %@ timed out with no response after %.1f seconds.",
                                   request.userInfo[@"CommandName"], request.timeoutInterval];
     NSString* errorDetail = @"Confirm that a WinKeyer is attached to the selected usbserial- port.";
@@ -870,6 +855,13 @@
         }
         self.winkeyerPort = nil;
     }
+}
+
+- (void)serialPortWasClosed:(ORSSerialPort *)serialPort
+{
+    self.statusGumdropImage = [NSImage imageNamed:NSImageNameStatusUnavailable];
+    self.statusString = @"";
+    self.versionString = @"";
 }
 
 @end

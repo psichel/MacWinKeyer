@@ -13,11 +13,8 @@
 
 @interface MacWinKeyer : NSObject <NSApplicationDelegate, NSTextFieldDelegate, ORSSerialPortDelegate>
 {
-    IBOutlet NSPopUpButton* _tabSelectButton;
-    IBOutlet NSTabView* _tabView;
-    IBOutlet NSButton* _tuneButton;
-	IBOutlet NSPopUpButton *oKeyerPortSelection;
-    IBOutlet NSProgressIndicator* _busyReadWriteProgress;
+    IBOutlet NSProgressIndicator* _busyReadWriteProgressWK2;
+    IBOutlet NSProgressIndicator* _busyReadWriteProgressWK3;
     IBOutlet StandaloneSettings* _standaloneSettings;
     
 	NSUInteger _keyboardBufferCharacterIndex;
@@ -33,12 +30,9 @@
 @property NSString* paddleEchoString;
 
 @property (getter = isHostMode) BOOL hostMode;
-@property NSString* statusString;
 
-// Bound to hidden property of gumdrop image views
-@property BOOL availableStatus; // Green gumdrop : idle
-@property BOOL partiallyAvailableStatus; // Yellow gumdrop : busy
-@property BOOL unavailableStatus; // Red gumdrop : wait or xoff or breakin
+@property NSString* statusString;
+@property NSImage* statusGumdropImage;
 
 @property ORSSerialPortManager * serialPortManager;
 @property ORSSerialPort * winkeyerPort;
