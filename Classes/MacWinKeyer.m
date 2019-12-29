@@ -822,8 +822,12 @@
         [self readType];
     } else if ([commandName isEqualToString:@"ReadType"]) {
         self.type = ((uint8*)responseData.bytes)[0];
-        self.standalone = self.type != WinKeyerTypeMINI; //TODO what about DUO?
-        self.versionString = [self.versionString stringByReplacingOccurrencesOfString:@"WinKeyer 3" withString:@"WKmini"];
+        if (self.type == WinKeyerTypeMINI) {
+            self.standalone = NO;
+            self.versionString = [self.versionString stringByReplacingOccurrencesOfString:@"WinKeyer 3" withString:@"WKmini"];
+        } else {
+            self.standalone = YES;
+        }
         [self echoTest];
     } else if ([commandName isEqualToString:@"EchoTest"]) {
         // Contrary to "Winkeyer2 IC v22 Interface and Operation Manual 6/6/2008", the
