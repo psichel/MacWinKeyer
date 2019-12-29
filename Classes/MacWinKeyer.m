@@ -11,8 +11,14 @@
 #import "StandaloneSettings.h"
 #import "WinKeyerConstants.h"
 #import "WinKeyerRegisters.h"
-#import "WinKeyerTypes.h"
 #import "Preferences.h"
+
+#pragma mark - TODO
+
+// Echo doesn't appear until after first esc (Clear)
+// Can't edit keyboard input -- no type-ahead?
+
+#pragma mark - Initialization
 
 @implementation MacWinKeyer
 
@@ -184,6 +190,22 @@
                                                                                          }];
     NSDictionary* userInfo = @{@"CommandName": @"ReadMinorVersion"};
     ORSSerialRequest* request = [ORSSerialRequest requestWithDataToSend:bytesToData(kWKAdminReadMinorVersionCommand, 2)
+                                                               userInfo:userInfo
+                                                        timeoutInterval:10.0
+                                                     responseDescriptor:descriptor];
+    [self.winkeyerPort sendRequest:request];
+}
+
+- (void)readType
+{
+    ORSSerialPacketDescriptor* descriptor = [[ORSSerialPacketDescriptor alloc] initWithMaximumPacketLength:1
+                                                                                                  userInfo:nil
+                                                                                         responseEvaluator:^BOOL(NSData* inputData) {
+                                                                                             if (inputData.length == 0) return NO;
+                                                                                             return YES;
+                                                                                         }];
+    NSDictionary* userInfo = @{@"CommandName": @"ReadType"};
+    ORSSerialRequest* request = [ORSSerialRequest requestWithDataToSend:bytesToData(kWKAdminGetTypeCommand, 2)
                                                                userInfo:userInfo
                                                         timeoutInterval:10.0
                                                      responseDescriptor:descriptor];
@@ -773,12 +795,14 @@
         uint8 versionNumber = ((uint8*)responseData.bytes)[0];
         NSInteger majorVersion = versionNumber / 10;
         NSInteger minorVersion = versionNumber - 10 * majorVersion;
-        self.versionString = [NSString stringWithFormat:@"WinKeyer version %1ld.%1ld", majorVersion, minorVersion];
         if (majorVersion >= 3 && majorVersion < 4) {
             self.version3 = YES;
+            self.versionString = [NSString stringWithFormat:@"WinKeyer 3 version %1ld.%1ld", majorVersion, minorVersion];
+            self.version31 = (minorVersion > 0 ? YES : NO); // Used to disable EEPROM read/write until get new layout specification
             [self readMinorVersion];
         } else if (majorVersion >= 2 && majorVersion < 3) {
             self.version2 = YES;
+            self.versionString = [NSString stringWithFormat:@"WinKeyer 2 version %1ld.%1ld", majorVersion, minorVersion];
             [self echoTest];
         } else {
             NSString* errorDescription = [NSString stringWithFormat:@"WinKeyer returned unsupported version: %ld.", majorVersion];
@@ -794,7 +818,12 @@
         uint8 versionNumber = ((uint8*)responseData.bytes)[0];
         NSInteger majorVersion = versionNumber / 10;
         NSInteger minorVersion = versionNumber - 10 * majorVersion;
-        self.versionString = [self.versionString stringByAppendingFormat:@".%1ld.%1ld", majorVersion, minorVersion];
+        self.versionString = [self.versionString stringByAppendingFormat:@".%1ld", minorVersion];
+        [self readType];
+    } else if ([commandName isEqualToString:@"ReadType"]) {
+        self.type = ((uint8*)responseData.bytes)[0];
+        self.standalone = self.type != WinKeyerTypeMINI; //TODO what about DUO?
+        self.versionString = [self.versionString stringByReplacingOccurrencesOfString:@"WinKeyer 3" withString:@"WKmini"];
         [self echoTest];
     } else if ([commandName isEqualToString:@"EchoTest"]) {
         // Contrary to "Winkeyer2 IC v22 Interface and Operation Manual 6/6/2008", the

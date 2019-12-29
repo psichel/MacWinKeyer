@@ -9,6 +9,13 @@
 #ifndef MacWinKeyer_WinKeyerTypes_h
 #define MacWinKeyer_WinKeyerTypes_h
 
+typedef NS_ENUM(NSInteger, WinKeyerType) {
+    WinKeyerTypeSMT = 1,
+    WinKeyerTypeDIP = 2,
+    WinKeyerTypeDUO = 3,
+    WinKeyerTypeMINI = 4
+};
+
 // Enumerated types associated with radio button matrix indicies in UI
 typedef NS_ENUM(NSUInteger, SidetoneFrequencyType) {
     Sidetone400Hz = 0,

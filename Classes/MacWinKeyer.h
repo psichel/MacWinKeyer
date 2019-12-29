@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "WinKeyerTypes.h"
 @import ORSSerial;
 @class StandaloneSettings;
 @class CCNPreferencesWindowController;
@@ -39,8 +40,12 @@
 @property NSString* portOpenCloseButtonTitle;
 @property NSString* versionString;
 
+@property WinKeyerType type;
 @property (getter = isVersion2) BOOL version2; // Implies WK2 Mode
 @property (getter = isVersion3) BOOL version3; // Implies WK3 Mode
+@property (getter = isVersion31) BOOL version31; // Temporary to prohibit writting EEPROM with wrong layout
+@property (getter = hasStandalone) BOOL standalone; // WKmini -- no standalone mode
+
 @property NSUInteger currentSpeed;
 
 @property BOOL terminating;
