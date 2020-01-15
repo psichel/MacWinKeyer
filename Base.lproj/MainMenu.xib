@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -2666,21 +2666,29 @@ Gw
                             <menuItem title="WinKeyer 2 Standalone Settings" id="Iu7-Tg-2G1">
                                 <connections>
                                     <action selector="showWindow:" target="LlF-3t-WM7" id="LYM-lg-IuD"/>
-                                </connections>
-                            </menuItem>
-                            <menuItem title="WinKeyer 3 Standalone Settings" id="7Eq-3P-bla">
-                                <connections>
-                                    <action selector="showWindow:" target="8cT-kf-GMo" id="7jQ-sP-U0p"/>
-                                    <binding destination="494" name="enabled" keyPath="self.hasStandalone" id="Uz1-Ps-woX"/>
-                                    <binding destination="494" name="enabled2" keyPath="self.isVersion31" previousBinding="Uz1-Ps-woX" id="seO-RK-07t">
+                                    <binding destination="494" name="enabled2" keyPath="self.isVersion2" previousBinding="gum-pX-QOe" id="2g4-O0-nEW">
                                         <dictionary key="options">
                                             <integer key="NSMultipleValuesPlaceholder" value="-1"/>
                                             <integer key="NSNoSelectionPlaceholder" value="-1"/>
                                             <integer key="NSNotApplicablePlaceholder" value="-1"/>
                                             <integer key="NSNullPlaceholder" value="-1"/>
-                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
                                         </dictionary>
                                     </binding>
+                                    <binding destination="494" name="enabled" keyPath="self.hasStandalone" id="gum-pX-QOe"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="WinKeyer 3 Standalone Settings" id="7Eq-3P-bla">
+                                <connections>
+                                    <action selector="showWindow:" target="8cT-kf-GMo" id="7jQ-sP-U0p"/>
+                                    <binding destination="494" name="enabled2" keyPath="self.isVersion3" previousBinding="pGj-Yi-qlg" id="wRt-kx-Rwd">
+                                        <dictionary key="options">
+                                            <integer key="NSMultipleValuesPlaceholder" value="-1"/>
+                                            <integer key="NSNoSelectionPlaceholder" value="-1"/>
+                                            <integer key="NSNotApplicablePlaceholder" value="-1"/>
+                                            <integer key="NSNullPlaceholder" value="-1"/>
+                                        </dictionary>
+                                    </binding>
+                                    <binding destination="494" name="enabled" keyPath="self.hasStandalone" id="pGj-Yi-qlg"/>
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="92">
@@ -4665,15 +4673,6 @@ Gw
                                     <integer key="NSNullPlaceholder" value="-1"/>
                                 </dictionary>
                             </binding>
-                            <binding destination="494" name="enabled4" keyPath="self.isVersion31" previousBinding="bWO-j7-7gQ" id="k2y-Vg-ATj">
-                                <dictionary key="options">
-                                    <integer key="NSMultipleValuesPlaceholder" value="-1"/>
-                                    <integer key="NSNoSelectionPlaceholder" value="-1"/>
-                                    <integer key="NSNotApplicablePlaceholder" value="-1"/>
-                                    <integer key="NSNullPlaceholder" value="-1"/>
-                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
-                                </dictionary>
-                            </binding>
                             <binding destination="494" name="enabled2" keyPath="self.version3" previousBinding="PnK-Uc-oQF" id="MxP-Sb-X4t">
                                 <dictionary key="options">
                                     <integer key="NSMultipleValuesPlaceholder" value="-1"/>
@@ -4694,21 +4693,12 @@ Gw
                         </buttonCell>
                         <connections>
                             <action selector="readEeprom:" target="494" id="3IY-dY-qJo"/>
-                            <binding destination="494" name="enabled3" keyPath="self.hasStandalone" previousBinding="Wdp-6B-NZ0" id="eoH-YD-ePy">
+                            <binding destination="494" name="enabled3" keyPath="self.hasStandalone" previousBinding="Wdp-6B-NZ0" id="dR4-Qf-ZFL">
                                 <dictionary key="options">
                                     <integer key="NSMultipleValuesPlaceholder" value="-1"/>
                                     <integer key="NSNoSelectionPlaceholder" value="-1"/>
                                     <integer key="NSNotApplicablePlaceholder" value="-1"/>
                                     <integer key="NSNullPlaceholder" value="-1"/>
-                                </dictionary>
-                            </binding>
-                            <binding destination="494" name="enabled4" keyPath="self.isVersion31" previousBinding="eoH-YD-ePy" id="qJS-VL-iVZ">
-                                <dictionary key="options">
-                                    <integer key="NSMultipleValuesPlaceholder" value="-1"/>
-                                    <integer key="NSNoSelectionPlaceholder" value="-1"/>
-                                    <integer key="NSNotApplicablePlaceholder" value="-1"/>
-                                    <integer key="NSNullPlaceholder" value="-1"/>
-                                    <string key="NSValueTransformerName">NSNegateBoolean</string>
                                 </dictionary>
                             </binding>
                             <binding destination="494" name="enabled2" keyPath="self.version3" previousBinding="Npz-g1-aGU" id="Wdp-6B-NZ0">

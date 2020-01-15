@@ -568,9 +568,9 @@
 - (void)closeHostModeAndSendData:(NSData*)dataToSend
 {
     [self closeHostMode];
-    NSLog(@"%s send of %ld bytes started at %@", __PRETTY_FUNCTION__, dataToSend.length, [NSDate date]);
+//    NSLog(@"%s send of %ld bytes started at %@", __PRETTY_FUNCTION__, dataToSend.length, [NSDate date]);
     [self.winkeyerPort sendData:dataToSend];
-    NSLog(@"%s send ended at %@", __PRETTY_FUNCTION__, [NSDate date]);
+//    NSLog(@"%s send ended at %@", __PRETTY_FUNCTION__, [NSDate date]);
 }
 
 - (void)reopenHostMode
@@ -792,6 +792,7 @@
     if ([commandName isEqualToString:@"HostOpen"]) {
         self.version2 = NO;
         self.version3 = NO;
+        self.standalone = YES;
         uint8 versionNumber = ((uint8*)responseData.bytes)[0];
         NSInteger majorVersion = versionNumber / 10;
         NSInteger minorVersion = versionNumber - 10 * majorVersion;
@@ -802,6 +803,7 @@
             [self readMinorVersion];
         } else if (majorVersion >= 2 && majorVersion < 3) {
             self.version2 = YES;
+            self.standalone = YES;
             self.versionString = [NSString stringWithFormat:@"WinKeyer 2 version %1ld.%1ld", majorVersion, minorVersion];
             [self echoTest];
         } else {
@@ -825,8 +827,6 @@
         if (self.type == WinKeyerTypeMINI) {
             self.standalone = NO;
             self.versionString = [self.versionString stringByReplacingOccurrencesOfString:@"WinKeyer 3" withString:@"WKmini"];
-        } else {
-            self.standalone = YES;
         }
         [self echoTest];
     } else if ([commandName isEqualToString:@"EchoTest"]) {
