@@ -19,7 +19,6 @@
     IBOutlet StandaloneSettings* _standaloneSettings;
     
 	NSUInteger _keyboardBufferCharacterIndex;
-    BOOL _suppressEchoTestCharacterDisplay;
 }
 
 @property BOOL waitState;

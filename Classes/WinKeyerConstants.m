@@ -12,7 +12,7 @@ const uint8 kWKAdminCalibrateCommand[2] = {0x00, 0x00}; // historical
 const uint8 kWKAdminResetCommand[2] = {0x00, 0x01};
 const uint8 kWKAdminHostOpenCommand[2] = {0x00, 0x02};
 const uint8 kWKAdminHostCloseCommand[2] = {0x00, 0x03};
-const uint8 kWKAdminEchoTestCommand[3] = {0x00, 0x04, 0x55};
+const uint8 kWKAdminEchoTestCommand[3] = {0x00, 0x04, 0x52}; // Echo test character 0x52 = 'R'
 const uint8 kWKAdminPaddleA2DCommand[2] = {0x00, 0x05}; // historical
 const uint8 kWKAdminSpeedA2DCommand[2] = {0x00, 0x06}; // historical
 const uint8 kWKAdminGetValuesCommands[2] = {0x00, 0x07};

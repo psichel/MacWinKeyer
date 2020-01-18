@@ -223,14 +223,14 @@
 
 - (void)echoTest
 {
-    _suppressEchoTestCharacterDisplay = YES;
     NSDictionary* userInfo = @{@"CommandName": @"EchoTest"};
+
     ORSSerialPacketDescriptor* descriptor = [[ORSSerialPacketDescriptor alloc] initWithMaximumPacketLength:1
                                                                                                   userInfo:nil
                                                                                          responseEvaluator:^BOOL(NSData* inputData) {
                                                                                              if (inputData.length != 1) return NO;
                                                                                              uint8* echo = (uint8*)(inputData.bytes);
-                                                                                             if (echo[0] != 0x55) return NO;
+                                                                                             if (echo[0] != kWKAdminEchoTestCommand[2]) return NO;
                                                                                              return YES;
                                                                                          }];
     ORSSerialRequest* request = [ORSSerialRequest requestWithDataToSend:bytesToData(kWKAdminEchoTestCommand, 3)
@@ -774,20 +774,16 @@
                     [self.winkeyerPort sendData:bytesToData(command, 2)];
                 }
             } else { // Echo byte
-                if (!_suppressEchoTestCharacterDisplay) {
-                    NSData* echoAsData = byteToData(v);
-                    NSString* echoString = [[NSString alloc] initWithData:echoAsData encoding:NSASCIIStringEncoding];
-                    NSDictionary* preferences = [[NSUserDefaults standardUserDefaults] dictionaryForKey:hostSettingsKeyPath];
-                    BOOL paddleEchoback = [preferences[HostPaddleEchoback] boolValue];
-                    if (paddleEchoback && self.paddleBreakinState) {
-                        [self insertInput:echoString];
-                    }
-                    BOOL serialEchoback = [preferences[HostSerialEchoback] boolValue];
-                    if (serialEchoback && !self.paddleBreakinState) {
-                        [self insertInput:echoString];
-                    }
-                } else {
-                    _suppressEchoTestCharacterDisplay = NO;
+                NSData* echoAsData = byteToData(v);
+                NSString* echoString = [[NSString alloc] initWithData:echoAsData encoding:NSASCIIStringEncoding];
+                NSDictionary* preferences = [[NSUserDefaults standardUserDefaults] dictionaryForKey:hostSettingsKeyPath];
+                BOOL paddleEchoback = [preferences[HostPaddleEchoback] boolValue];
+                if (paddleEchoback && self.paddleBreakinState) {
+                    [self insertInput:echoString];
+                }
+                BOOL serialEchoback = [preferences[HostSerialEchoback] boolValue];
+                if (serialEchoback && !self.paddleBreakinState) {
+                    [self insertInput:echoString];
                 }
             }
         }
