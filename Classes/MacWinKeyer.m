@@ -63,10 +63,19 @@
 
 - (void)insertInput:(NSString *)string
 {
-    static const NSInteger displayLength = 60L;
-    self.paddleEchoString = [self.paddleEchoString stringByAppendingString:string];
-    if (self.paddleEchoString.length > displayLength) {
-        self.paddleEchoString = [self.paddleEchoString substringFromIndex:(self.paddleEchoString.length - displayLength)];
+    // Sanity test on string
+    BOOL isSingleCharacter = (string.length == 1);
+    if (isSingleCharacter) {
+        unichar character = [string characterAtIndex:0];
+        BOOL isPrintableCharacter = [[NSCharacterSet alphanumericCharacterSet] characterIsMember:character];
+        BOOL isPunctuationCharacter = [[NSCharacterSet punctuationCharacterSet] characterIsMember:character];
+        if (isPrintableCharacter || isPunctuationCharacter) {
+            static const NSInteger displayLength = 60L;
+            self.paddleEchoString = [self.paddleEchoString stringByAppendingString:string];
+            if (self.paddleEchoString.length > displayLength) {
+                self.paddleEchoString = [self.paddleEchoString substringFromIndex:(self.paddleEchoString.length - displayLength)];
+            }
+        }
     }
 }
 
