@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -685,9 +685,6 @@ Gw
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
-                                    <connections>
-                                        <binding destination="494" name="hidden" keyPath="self.version3" id="Qa7-pa-Li2"/>
-                                    </connections>
                                 </textField>
                                 <textField toolTip="Modfies the duration of dahs relative to dits by factor 3*(x/50) where x is between 33 and 66. " verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="siv-Hq-SyT" userLabel="Ratio Label">
                                     <rect key="frame" x="28" y="34" width="38" height="14"/>
@@ -776,7 +773,6 @@ Gw
                                     <connections>
                                         <action selector="changeFirstExtension:" target="494" id="h23-D1-mBn"/>
                                         <binding destination="1997" name="value" keyPath="selection.KeyFirstExtension" id="fWr-mF-TYP"/>
-                                        <binding destination="494" name="hidden" keyPath="self.version3" id="bah-vP-R5o"/>
                                     </connections>
                                 </textField>
                                 <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cbA-cv-gTv" userLabel="First Extension Stepper">
@@ -786,7 +782,6 @@ Gw
                                     <connections>
                                         <action selector="changeFirstExtension:" target="494" id="Jyy-FX-RxX"/>
                                         <binding destination="1997" name="value" keyPath="selection.KeyFirstExtension" id="nPi-2s-rvr"/>
-                                        <binding destination="494" name="hidden" keyPath="self.version3" id="IV8-8V-2Sv"/>
                                     </connections>
                                 </stepper>
                                 <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcS-zg-Bd2" userLabel="Weight Text Field">
@@ -1261,7 +1256,7 @@ Gw
                     </box>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-1168.5" y="-538"/>
+            <point key="canvasLocation" x="-1133" y="-822"/>
         </window>
         <window title="Serial Port Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="SerialPortSettings" animationBehavior="default" tabbingMode="disallowed" id="UM6-2Z-I2p" userLabel="Serial Port Settings Window">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
@@ -2308,7 +2303,7 @@ Gw
                     </progressIndicator>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-1278.5" y="-330"/>
+            <point key="canvasLocation" x="-1045" y="-607"/>
         </window>
         <menu title="AMainMenu" systemMenu="main" id="29">
             <items>
@@ -2666,6 +2661,7 @@ Gw
                             <menuItem title="WinKeyer 2 Standalone Settings" id="Iu7-Tg-2G1">
                                 <connections>
                                     <action selector="showWindow:" target="LlF-3t-WM7" id="LYM-lg-IuD"/>
+                                    <binding destination="494" name="enabled" keyPath="self.hasStandalone" id="gum-pX-QOe"/>
                                     <binding destination="494" name="enabled2" keyPath="self.isVersion2" previousBinding="gum-pX-QOe" id="2g4-O0-nEW">
                                         <dictionary key="options">
                                             <integer key="NSMultipleValuesPlaceholder" value="-1"/>
@@ -2674,12 +2670,12 @@ Gw
                                             <integer key="NSNullPlaceholder" value="-1"/>
                                         </dictionary>
                                     </binding>
-                                    <binding destination="494" name="enabled" keyPath="self.hasStandalone" id="gum-pX-QOe"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="WinKeyer 3 Standalone Settings" id="7Eq-3P-bla">
                                 <connections>
                                     <action selector="showWindow:" target="8cT-kf-GMo" id="7jQ-sP-U0p"/>
+                                    <binding destination="494" name="enabled" keyPath="self.hasStandalone" id="pGj-Yi-qlg"/>
                                     <binding destination="494" name="enabled2" keyPath="self.isVersion3" previousBinding="pGj-Yi-qlg" id="wRt-kx-Rwd">
                                         <dictionary key="options">
                                             <integer key="NSMultipleValuesPlaceholder" value="-1"/>
@@ -2688,7 +2684,6 @@ Gw
                                             <integer key="NSNullPlaceholder" value="-1"/>
                                         </dictionary>
                                     </binding>
-                                    <binding destination="494" name="enabled" keyPath="self.hasStandalone" id="pGj-Yi-qlg"/>
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="92">
