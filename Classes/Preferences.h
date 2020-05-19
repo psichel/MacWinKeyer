@@ -18,7 +18,7 @@ extern NSString* standaloneSettings1KeyPath;
 extern NSString* HostPaddleEchoback          ;
 extern NSString* HostSerialEchoback          ;
 extern NSString* KeyCompensation             ;
-extern NSString* KeyFirstExtension           ;  // WK2
+extern NSString* KeyFirstExtension           ;  // WK2 and WK3.1, not WK3.0
 extern NSString* KeyOut1Enable               ;
 extern NSString* KeyOut2Enable               ;
 extern NSString* KeyRatio                    ;

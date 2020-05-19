@@ -848,6 +848,9 @@
         }
         [self loadDefaults];
         [self.winkeyerPort sendData:byteToData(kWKImmediateGetSpeedPotCommand)];
+        if (self.version31) {
+            [self changeFirstExtension:nil];
+        }
         self.hostMode = YES;
         [self changeStatusString];
     } else if ([commandName isEqualToString:@"ReadWK2EEPROM"]) {

@@ -20,7 +20,7 @@ NSString* HostPaddleEchoback        = @"HostPaddleEchoback"  ;
 NSString* HostSerialEchoback        = @"HostSerialEchoback"  ;
 
 NSString* KeyCompensation           = @"KeyCompensation"  ;
-NSString* KeyFirstExtension         = @"KeyFirstExtension"  ;  // WK2
+NSString* KeyFirstExtension         = @"KeyFirstExtension"  ;  // WK2 and WK3.1, not WK3.0
 NSString* KeyOut1Enable             = @"KeyOut1Enable"  ;
 NSString* KeyOut2Enable             = @"KeyOut2Enable"  ;
 NSString* KeyRatio                  = @"KeyRatio"  ;
