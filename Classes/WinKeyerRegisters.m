@@ -198,7 +198,7 @@ uint8 encodeWK3Extension1RegisterFromDict(NSDictionary* preferences)
 {
     uint8 extensionRegister = 0x00;
     uint8 letterSpaceAdjustment = [preferences[PaddleLetterSpace] integerValue];
-    extensionRegister = (letterSpaceAdjustment &= 0x1F);
+    extensionRegister = (letterSpaceAdjustment & 0x1F);
     NSUInteger userOne = [preferences[StandaloneUser] integerValue];
     if (userOne == 1) extensionRegister |= 0x80;
     BOOL messageBankOne = [preferences[MessageBank] boolValue];
