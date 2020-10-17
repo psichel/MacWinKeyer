@@ -1,556 +1,0 @@
-TWK24Mac
-v7
-r0
-t329611765.578574
-cCheck dependencies
-
-N/Developer/SDKs/MacOSX10.6.sdk
-c000000004CAA740B00000000000000EE
-t1286239243
-s238
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Cocoa.framework/Headers/Cocoa.h
-c0000000040C4AA6800000000000001E5
-t1086630504
-s485
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h
-c000000004C23A0120000000000012048
-t1277403154
-s73800
-
-N/Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/IOKit.framework/Headers/serial/IOSerialKeys.h
-c000000004C239B710000000000000B28
-t1277401969
-s2856
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/ioctl.h
-c000000004C239946000000000000116C
-t1277401414
-s4460
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/select.h
-c000000004C23994700000000000016A2
-t1277401415
-s5794
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/termios.h
-c000000004BBD2CE900000000000004D4
-t1270689001
-s1236
-
-N/Developer/SDKs/MacOSX10.6.sdk/usr/include/unistd.h
-c000000004BBD2CE9000000000000563E
-t1270689001
-s22078
-
-N/System/Library/Frameworks/Cocoa.framework/Cocoa
-c000000004A1F2D63000000000000A5E0
-t1243557219
-s42464
-
-N/System/Library/Frameworks/IOKit.framework/IOKit
-c000000004C8AD97D000000000017B260
-t1284168061
-s1552992
-
-N/Users/jamestrogers/Development/WK24Mac/AppData.plist
-c000000004DAF5DF00000000000000708
-t1303338480
-s1800
-
-N/Users/jamestrogers/Development/WK24Mac/English.lproj/InfoPlist.strings
-c000000004DAF5F4C000000000000002D
-t1303338828
-s45
-
-N/Users/jamestrogers/Development/WK24Mac/English.lproj/MainMenu.xib
-c000000004DDF5D48000000000007226B
-t1306484040
-s467563
-
-N/Users/jamestrogers/Development/WK24Mac/WK24MacAppDelegate.h
-c000000004DAF5F7500000000000019EC
-t1303338869
-s6636
-i<Cocoa/Cocoa.h>
-
-N/Users/jamestrogers/Development/WK24Mac/WK24MacAppDelegate.m
-c000000004DDF8502000000000000C613
-t1306494210
-s50707
-i"WK24MacAppDelegate.h"
-i"serial.h"
-i<termios.h>
-i<sys/ioctl.h>
-i<sys/select.h>
-i<unistd.h>
-
-N/Users/jamestrogers/Development/WK24Mac/WK24Mac_Prefix.pch
-c000000004DAF5F720000000000000091
-t1303338866
-s145
-i<Cocoa/Cocoa.h>
-
-N/Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app
-t1306494229
-s102
-
-N/Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/Info.plist
-t1306494223
-s886
-
-N/Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/MacOS/WK24Mac
-t1306494229
-s107728
-
-N/Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/PkgInfo
-t1306494223
-s8
-
-N/Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/AppData.plist
-t1306494319
-s2221
-
-N/Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/English.lproj/InfoPlist.strings
-t1306494223
-s92
-
-N/Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/English.lproj/MainMenu.nib
-t1306494223
-s109147
-
-N/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/WK24Mac.LinkFileList
-c000000004DDF850F0000000000000157
-t1306494223
-s343
-
-N/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/WK24MacAppDelegate.o
-t1306494229
-s181456
-
-N/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/main.o
-t1306494228
-s4992
-
-N/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/serial.o
-t1306494229
-s5112
-
-N/Users/jamestrogers/Development/WK24Mac/main.m
-c000000004DAF5F590000000000000101
-t1303338841
-s257
-i<Cocoa/Cocoa.h>
-
-N/Users/jamestrogers/Development/WK24Mac/serial.c
-c000000004DAF5F610000000000000703
-t1303338849
-s1795
-i"serial.h"
-
-N/Users/jamestrogers/Development/WK24Mac/serial.h
-c000000004DAF5F650000000000000117
-t1303338853
-s279
-i<IOKit/IOKitLib.h>
-i<IOKit/serial/IOSerialKeys.h>
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/AppData.plist
-c000000004DF538510000000000000764
-t1307916369
-s1892
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/InfoPlist.strings
-c000000004DAF5F4C000000000000002D
-t1303338828
-s45
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib
-c000000004DF53BD30000000000074C4B
-t1307917267
-s478283
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.h
-c000000004DF11D180000000000001B62
-t1307647256
-s7010
-i<Cocoa/Cocoa.h>
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m
-c000000004DF54275000000000000E858
-t1307918965
-s59480
-i"WK24MacAppDelegate.h"
-i"serial.h"
-i<termios.h>
-i<sys/ioctl.h>
-i<sys/select.h>
-i<unistd.h>
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac_Prefix.pch
-c000000004DAF5F720000000000000091
-t1303338866
-s145
-i<Cocoa/Cocoa.h>
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app
-t2
-s0
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/Info.plist
-t2
-s0
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/MacOS/WK24Mac
-t2
-s0
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/PkgInfo
-t2
-s0
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/AppData.plist
-t2
-s0
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/English.lproj/InfoPlist.strings
-t2
-s0
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/English.lproj/MainMenu.nib
-t2
-s0
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/untitled.plist
-t2
-s0
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/wk24mac.icns
-t2
-s0
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/WK24Mac.LinkFileList
-c00000000000000000000000000000000
-t2
-s0
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/WK24MacAppDelegate.o
-t2
-s0
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/main.o
-t2
-s0
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/serial.o
-t2
-s0
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m
-c000000004DAF5F590000000000000101
-t1303338841
-s257
-i<Cocoa/Cocoa.h>
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c
-c000000004DAF5F610000000000000703
-t1303338849
-s1795
-i"serial.h"
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.h
-c000000004DAF5F650000000000000117
-t1303338853
-s279
-i<IOKit/IOKitLib.h>
-i<IOKit/serial/IOSerialKeys.h>
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/untitled.plist
-c000000004DA31DCE0000000000000708
-t1302535630
-s1800
-
-N/Users/jimrogers_w4atk/Development/workspace/WK24Mac/wk24mac.icns
-c000000004DB562D2000000000001816F
-t1303732946
-s98671
-
-N/var/folders/37/37SaxoA-E78Ou8Xc6X8hrE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-dfaacgyjyzyvcfaxbymrippjtqfr/WK24Mac_Prefix.pch.gch
-t1306494224
-s2195824
-
-N/var/folders/37/37SaxoA-E78Ou8Xc6X8hrE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-ehrjzuvcpdvwmwezllhmrjvufnms/WK24Mac_Prefix.pch.gch
-t1306494228
-s54306576
-
-N/var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-bykiyihaeziqtacajuxvhllultcl/WK24Mac_Prefix.pch.gch
-t2
-s0
-
-N/var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-hdhtqmtddryhrtcndeyghjylnpmp/WK24Mac_Prefix.pch.gch
-t2
-s0
-
-NWK24Mac-Info.plist
-c000000004DDF9BE4000000000000044F
-t1306500068
-s1103
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies329611765#329611765#0(0"0(0#1#0"8619090944#0"0#
-
-CCompileC build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/WK24MacAppDelegate.o /Users/jamestrogers/Development/WK24Mac/WK24MacAppDelegate.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s328187029.033422
-e328187029.527927
-r1
-xCompileC
-xbuild/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/WK24MacAppDelegate.o
-x/Users/jamestrogers/Development/WK24Mac/WK24MacAppDelegate.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@68"Compile /Users/jamestrogers/Development/WK24Mac/WK24MacAppDelegate.m328187029#328187029#0(0"0(0#0#60"/Users/jamestrogers/Development/WK24Mac/WK24MacAppDelegate.m8621463072#1489"    cd /Users/jamestrogers/Development/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jamestrogers/Development/WK24Mac/build/Debug -I/Users/jamestrogers/Development/WK24Mac/build/Debug/include -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources/x86_64 -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources -include /var/folders/37/37SaxoA-E78Ou8Xc6X8hrE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-ehrjzuvcpdvwmwezllhmrjvufnms/WK24Mac_Prefix.pch -c /Users/jamestrogers/Development/WK24Mac/WK24MacAppDelegate.m -o /Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/WK24MacAppDelegate.o0#
-
-CCompileC build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/WK24MacAppDelegate.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s329611660.596160
-e329611661.676437
-r1
-xCompileC
-xbuild/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/WK24MacAppDelegate.o
-x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@81"Compile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m329611660#329611661#0(0"0(0#0#73"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m8618086848#1632"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources/x86_64 -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources -include /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-hdhtqmtddryhrtcndeyghjylnpmp/WK24Mac_Prefix.pch -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24MacAppDelegate.m -o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/WK24MacAppDelegate.o0#
-
-CCompileC build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/main.o /Users/jamestrogers/Development/WK24Mac/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s328187028.845170
-e328187029.033223
-r1
-xCompileC
-xbuild/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/main.o
-x/Users/jamestrogers/Development/WK24Mac/main.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@54"Compile /Users/jamestrogers/Development/WK24Mac/main.m328187028#328187029#0(0"0(0#0#46"/Users/jamestrogers/Development/WK24Mac/main.m8620979520#1461"    cd /Users/jamestrogers/Development/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jamestrogers/Development/WK24Mac/build/Debug -I/Users/jamestrogers/Development/WK24Mac/build/Debug/include -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources/x86_64 -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources -include /var/folders/37/37SaxoA-E78Ou8Xc6X8hrE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-ehrjzuvcpdvwmwezllhmrjvufnms/WK24Mac_Prefix.pch -c /Users/jamestrogers/Development/WK24Mac/main.m -o /Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/main.o0#
-
-CCompileC build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/main.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s329609812.658593
-e329609812.832020
-r1
-xCompileC
-xbuild/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/main.o
-x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@67"Compile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m329609812#329609812#0(0"0(0#0#59"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m8606525344#1604"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources/x86_64 -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources -include /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-hdhtqmtddryhrtcndeyghjylnpmp/WK24Mac_Prefix.pch -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/main.m -o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/main.o0#
-
-CCompileC build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/serial.o /Users/jamestrogers/Development/WK24Mac/serial.c normal x86_64 c com.apple.compilers.gcc.4_2
-s328187029.528052
-e328187029.593756
-r1
-xCompileC
-xbuild/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/serial.o
-x/Users/jamestrogers/Development/WK24Mac/serial.c
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@56"Compile /Users/jamestrogers/Development/WK24Mac/serial.c328187029#328187029#0(0"0(0#0#48"/Users/jamestrogers/Development/WK24Mac/serial.c8620578432#1455"    cd /Users/jamestrogers/Development/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jamestrogers/Development/WK24Mac/build/Debug -I/Users/jamestrogers/Development/WK24Mac/build/Debug/include -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources/x86_64 -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources -include /var/folders/37/37SaxoA-E78Ou8Xc6X8hrE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-dfaacgyjyzyvcfaxbymrippjtqfr/WK24Mac_Prefix.pch -c /Users/jamestrogers/Development/WK24Mac/serial.c -o /Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/serial.o0#
-
-CCompileC build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/serial.o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c normal x86_64 c com.apple.compilers.gcc.4_2
-s329609812.832118
-e329609812.898600
-r1
-xCompileC
-xbuild/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/serial.o
-x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@69"Compile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c329609812#329609812#0(0"0(0#0#61"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c8609033792#1598"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources/x86_64 -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources -include /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-bykiyihaeziqtacajuxvhllultcl/WK24Mac_Prefix.pch -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/serial.c -o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/serial.o0#
-
-CCompileXIB /Users/jamestrogers/Development/WK24Mac/English.lproj/MainMenu.xib
-s328187023.113470
-e328187023.952053
-r1
-xCompileXIB
-x/Users/jamestrogers/Development/WK24Mac/English.lproj/MainMenu.xib
-o/* com.apple.ibtool.document.notices */
-o/Users/jamestrogers/Development/WK24Mac/English.lproj/MainMenu.xib:716: note: This view is clipping its content.
-lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib328187023#328187023#0(153"/* com.apple.ibtool.document.notices *//Users/jamestrogers/Development/WK24Mac/English.lproj/MainMenu.xib:716: note: This view is clipping its content.1(13@34"This view is clipping its content.328187023#18446744073709551615#0#0(6@66"/Users/jamestrogers/Development/WK24Mac/English.lproj/MainMenu.xib328176840#716#0#716#0#0"0(0#0#66"/Users/jamestrogers/Development/WK24Mac/English.lproj/MainMenu.xib8620477984#367"    cd /Users/jamestrogers/Development/WK24Mac    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/English.lproj/MainMenu.nib /Users/jamestrogers/Development/WK24Mac/English.lproj/MainMenu.xib --sdk /Developer/SDKs/MacOSX10.6.sdk0#
-
-CCompileXIB /Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib
-s329610084.911718
-e329610086.675807
-r1
-xCompileXIB
-x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib
-o/* com.apple.ibtool.document.notices */
-o/Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib:716: note: This view is clipping its content.
-o/Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib:952: note: This view is clipping its content.
-lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib329610084#329610086#0(292"/* com.apple.ibtool.document.notices *//Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib:716: note: This view is clipping its content./Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib:952: note: This view is clipping its content.2(13@34"This view is clipping its content.329610086#18446744073709551615#0#0(6@79"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib329610067#716#0#716#0#0"0(13@34"This view is clipping its content.329610086#18446744073709551615#0#0(6@79"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib329610067#952#0#952#0#0"0(0#0#79"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib8609180128#406"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/English.lproj/MainMenu.nib /Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/MainMenu.xib --sdk /Developer/SDKs/MacOSX10.6.sdk0#
-
-CCopyPlistFile /Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/AppData.plist AppData.plist
-s328187023.147962
-e328187023.173228
-r1
-xCopyPlistFile
-x/Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/AppData.plist
-xAppData.plist
-lSLF07#2@18"Copy AppData.plist328187023#328187023#0(0"0(0#0#53"/Users/jamestrogers/Development/WK24Mac/AppData.plist8620099456#244"    cd /Users/jamestrogers/Development/WK24Mac    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copyplist AppData.plist --outdir /Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources0#
-
-CCopyPlistFile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/AppData.plist AppData.plist
-s329609808.828162
-e329609808.855557
-r1
-xCopyPlistFile
-x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/AppData.plist
-xAppData.plist
-lSLF07#2@18"Copy AppData.plist329609808#329609808#0(0"0(0#0#66"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/AppData.plist8610085536#270"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copyplist AppData.plist --outdir /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources0#
-
-CCopyPlistFile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/untitled.plist untitled.plist
-r0
-
-CCopyStringsFile /Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
-s328187023.111985
-e328187023.147836
-r1
-xCopyStringsFile
-x/Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/English.lproj/InfoPlist.strings
-xEnglish.lproj/InfoPlist.strings
-lSLF07#2@36"Copy English.lproj/InfoPlist.strings328187023#328187023#0(0"0(0#0#71"/Users/jamestrogers/Development/WK24Mac/English.lproj/InfoPlist.strings8620709184#367"    cd /Users/jamestrogers/Development/WK24Mac    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/English.lproj0#
-
-CCopyStringsFile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
-s329609808.758325
-e329609808.828069
-r1
-xCopyStringsFile
-x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/English.lproj/InfoPlist.strings
-xEnglish.lproj/InfoPlist.strings
-lSLF07#2@36"Copy English.lproj/InfoPlist.strings329609808#329609808#0(0"0(0#0#84"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/English.lproj/InfoPlist.strings8608733312#393"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources/English.lproj0#
-
-CCpResource build/Debug/WK24Mac.app/Contents/Resources/wk24mac.icns wk24mac.icns
-s329609808.855653
-e329609808.861533
-r1
-xCpResource
-xbuild/Debug/WK24Mac.app/Contents/Resources/wk24mac.icns
-xwk24mac.icns
-lSLF07#2@17"Copy wk24mac.icns329609808#329609808#0(0"0(0#0#65"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/wk24mac.icns8609996256#384"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/jimrogers_w4atk/Development/workspace/WK24Mac/wk24mac.icns /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/Resources0#
-
-CLd /Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/MacOS/WK24Mac normal x86_64
-s328187029.593911
-e328187029.737134
-r1
-xLd
-x/Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/MacOS/WK24Mac
-xnormal
-xx86_64
-lSLF07#2@91"Link /Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/MacOS/WK24Mac328187029#328187029#0(0"0(0#0#0"8620389920#564"    cd /Users/jamestrogers/Development/WK24Mac    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/jamestrogers/Development/WK24Mac/build/Debug -F/Users/jamestrogers/Development/WK24Mac/build/Debug -filelist /Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/WK24Mac.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -framework IOKit -o /Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/MacOS/WK24Mac0#
-
-CLd /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/MacOS/WK24Mac normal x86_64
-s329611661.676527
-e329611661.727678
-r1
-xLd
-x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/MacOS/WK24Mac
-xnormal
-xx86_64
-lSLF07#2@104"Link /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/MacOS/WK24Mac329611661#329611661#0(0"0(0#0#0"8622230464#629"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug -filelist /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/Objects-normal/x86_64/WK24Mac.LinkFileList -mmacosx-version-min=10.6 -framework Cocoa -framework IOKit -o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/MacOS/WK24Mac0#
-
-CProcessInfoPlistFile /Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/Info.plist WK24Mac-Info.plist
-s328187023.107456
-e328187023.111890
-r1
-xProcessInfoPlistFile
-x/Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/Info.plist
-xWK24Mac-Info.plist
-lSLF07#2@26"Process WK24Mac-Info.plist328187023#328187023#0(0"0(0#0#58"/Users/jamestrogers/Development/WK24Mac/WK24Mac-Info.plist8621458720#313"    cd /Users/jamestrogers/Development/WK24Mac    builtin-infoPlistUtility WK24Mac-Info.plist -genpkginfo /Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app/Contents/Info.plist0#
-
-CProcessInfoPlistFile /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/Info.plist WK24Mac-Info.plist
-s329609808.750464
-e329609808.758242
-r1
-xProcessInfoPlistFile
-x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/Info.plist
-xWK24Mac-Info.plist
-lSLF07#2@26"Process WK24Mac-Info.plist329609808#329609808#0(0"0(0#0#71"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac-Info.plist8610089888#352"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    builtin-infoPlistUtility WK24Mac-Info.plist -genpkginfo /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app/Contents/Info.plist0#
-
-CProcessPCH /var/folders/37/37SaxoA-E78Ou8Xc6X8hrE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-dfaacgyjyzyvcfaxbymrippjtqfr/WK24Mac_Prefix.pch.gch WK24Mac_Prefix.pch normal x86_64 c com.apple.compilers.gcc.4_2
-s328187023.953409
-e328187024.104578
-r1
-xProcessPCH
-x/var/folders/37/37SaxoA-E78Ou8Xc6X8hrE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-dfaacgyjyzyvcfaxbymrippjtqfr/WK24Mac_Prefix.pch.gch
-xWK24Mac_Prefix.pch
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@29"Precompile WK24Mac_Prefix.pch328187023#328187024#0(0"0(0#0#58"/Users/jamestrogers/Development/WK24Mac/WK24Mac_Prefix.pch8621062368#1356"    cd /Users/jamestrogers/Development/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jamestrogers/Development/WK24Mac/build/Debug -I/Users/jamestrogers/Development/WK24Mac/build/Debug/include -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources/x86_64 -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources -c /Users/jamestrogers/Development/WK24Mac/WK24Mac_Prefix.pch -o /var/folders/37/37SaxoA-E78Ou8Xc6X8hrE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-dfaacgyjyzyvcfaxbymrippjtqfr/WK24Mac_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/37/37SaxoA-E78Ou8Xc6X8hrE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-ehrjzuvcpdvwmwezllhmrjvufnms/WK24Mac_Prefix.pch.gch WK24Mac_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s328187023.952279
-e328187028.844894
-r1
-xProcessPCH
-x/var/folders/37/37SaxoA-E78Ou8Xc6X8hrE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-ehrjzuvcpdvwmwezllhmrjvufnms/WK24Mac_Prefix.pch.gch
-xWK24Mac_Prefix.pch
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@29"Precompile WK24Mac_Prefix.pch328187023#328187028#0(0"0(0#0#58"/Users/jamestrogers/Development/WK24Mac/WK24Mac_Prefix.pch8621130528#1366"    cd /Users/jamestrogers/Development/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jamestrogers/Development/WK24Mac/build/Debug -I/Users/jamestrogers/Development/WK24Mac/build/Debug/include -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources/x86_64 -I/Users/jamestrogers/Development/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources -c /Users/jamestrogers/Development/WK24Mac/WK24Mac_Prefix.pch -o /var/folders/37/37SaxoA-E78Ou8Xc6X8hrE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-ehrjzuvcpdvwmwezllhmrjvufnms/WK24Mac_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-bykiyihaeziqtacajuxvhllultcl/WK24Mac_Prefix.pch.gch WK24Mac_Prefix.pch normal x86_64 c com.apple.compilers.gcc.4_2
-s329609809.509874
-e329609809.585422
-r1
-xProcessPCH
-x/var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-bykiyihaeziqtacajuxvhllultcl/WK24Mac_Prefix.pch.gch
-xWK24Mac_Prefix.pch
-xnormal
-xx86_64
-xc
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@29"Precompile WK24Mac_Prefix.pch329609809#329609809#0(0"0(0#0#71"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac_Prefix.pch8604612608#1486"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources/x86_64 -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac_Prefix.pch -o /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-bykiyihaeziqtacajuxvhllultcl/WK24Mac_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-hdhtqmtddryhrtcndeyghjylnpmp/WK24Mac_Prefix.pch.gch WK24Mac_Prefix.pch normal x86_64 objective-c com.apple.compilers.gcc.4_2
-s329609809.509053
-e329609812.658370
-r1
-xProcessPCH
-x/var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-hdhtqmtddryhrtcndeyghjylnpmp/WK24Mac_Prefix.pch.gch
-xWK24Mac_Prefix.pch
-xnormal
-xx86_64
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@29"Precompile WK24Mac_Prefix.pch329609809#329609812#0(0"0(0#0#71"/Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac_Prefix.pch8605847712#1496"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c-header -arch x86_64 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-generated-files.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-own-target-headers.hmap -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-all-target-headers.hmap -iquote /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/WK24Mac-project-headers.hmap -F/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/include -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources/x86_64 -I/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/WK24Mac.build/Debug/WK24Mac.build/DerivedSources -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/WK24Mac_Prefix.pch -o /var/folders/nP/nPvJTOmxG+uaGelOdaQQz++++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/WK24Mac_Prefix-hdhtqmtddryhrtcndeyghjylnpmp/WK24Mac_Prefix.pch.gch0#
-
-CTouch /Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app
-s328187029.737278
-e328187029.741544
-r1
-xTouch
-x/Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app
-lSLF07#2@69"Touch /Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app328187029#328187029#0(0"0(0#0#0"8620962464#133"    cd /Users/jamestrogers/Development/WK24Mac    /usr/bin/touch -c /Users/jamestrogers/Development/WK24Mac/build/Debug/WK24Mac.app0#
-
-CTouch /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app
-s329611661.727822
-e329611661.730216
-r1
-xTouch
-x/Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app
-lSLF07#2@82"Touch /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app329611661#329611661#0(0"0(0#0#0"8618315872#159"    cd /Users/jimrogers_w4atk/Development/workspace/WK24Mac    /usr/bin/touch -c /Users/jimrogers_w4atk/Development/workspace/WK24Mac/build/Debug/WK24Mac.app0#
-

@@ -388,7 +388,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MARKETING_VERSION = 1.2.3A;
+				MARKETING_VERSION = 1.2.3C;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.k1gq.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = MacWinKeyer;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -410,7 +410,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MARKETING_VERSION = 1.2.3A;
+				MARKETING_VERSION = 1.2.3C;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.k1gq.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = MacWinKeyer;
 				PROVISIONING_PROFILE_SPECIFIER = "";
