@@ -295,6 +295,7 @@
 {
     self.keyboardBufferString = @"";
 	_keyboardBufferCharacterIndex = 0;
+    _keyboardBufferSentIndex = 0;
     const uint8 command[2] = {kWKImmediateClearBufferCommand, kWKImmediateRequestWinKeyer2StatusCommand};
     [self.winkeyerPort sendData:bytesToData(command, 2)];
     self.paddleEchoString = @"";
@@ -637,7 +638,7 @@
 }
 
 #pragma mark - Keyboard text field observer
-
+// Detect when new characters have been typed
 - (void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change context:(void*)context
 {
     if (self.winkeyerPort.isOpen && self.isHostMode) {
@@ -647,15 +648,63 @@
 
 - (void)sendKeyboardBuffer
 {
-    static const NSUInteger maximumToSendLength = 64;
+    // Max send length to WK2 chip is 64 bytes
+    // We choose to only send upto 5 characters ahead so the remaining
+    // characters in the text field can be edited.
+    // This means the observedValue of the input field might not change,
+    // so we check back as characters are echoed.
     if (_keyboardBufferCharacterIndex < self.keyboardBufferString.length) {
-        NSString* stringToSend = [self.keyboardBufferString substringFromIndex:_keyboardBufferCharacterIndex];     // extract the new data to send
-        if (stringToSend.length > maximumToSendLength) {								// max length to WK2 chip
-            stringToSend = [stringToSend substringToIndex:maximumToSendLength];
+        // extract the new data to send
+        NSString* stringToSend = [self.keyboardBufferString substringFromIndex:_keyboardBufferCharacterIndex];
+        NSUInteger wkCharactersInFlight = _keyboardBufferCharacterIndex - _keyboardBufferSentIndex;
+        if (wkCharactersInFlight < 5) {
+            if (wkCharactersInFlight + stringToSend.length > 5) {                        // forward up 5 characters ahead
+                stringToSend = [stringToSend substringToIndex:5-wkCharactersInFlight];
+            }
+            NSLog(@"characterIndex: %lu, sentIndex: %lu, sending:%@",
+                  _keyboardBufferCharacterIndex, _keyboardBufferSentIndex, stringToSend);
+            _keyboardBufferCharacterIndex = _keyboardBufferCharacterIndex + stringToSend.length;
+            [self sendAsciiString:stringToSend];
         }
-        _keyboardBufferCharacterIndex = _keyboardBufferCharacterIndex + stringToSend.length;
-        [self sendAsciiString:stringToSend];
+        
+
     }
+}
+
+/***
+We track which characters have been sent so we can limit the number characters ahead
+we send to the WK chip.  This allows us to show which characters have been sent
+and edit input not yet forwarded to the WK.
+ 
+Find next occurance of sent character (serial port data echo byte) in previously
+unsent keyboard buffer. Update sentIndex to just after last character sent.
+Notice only sendable morse characters are echoed so we search forward to skip
+word spaces, line breaks, or other unsendable characters.
+ */
+- (NSUInteger)updateKeyboardSentIndex:(NSString*)sentCharacter {
+    NSString *wkNotYetSent;
+    NSUInteger currentBufferLength;
+    NSRange range;
+    // Caution: if the user presses backspace,
+    // the keyboard buffer might be shorter than the sent or character index.
+    // If so, we update them to point to the end of the buffer.
+    currentBufferLength = self.keyboardBufferString.length;
+    if (_keyboardBufferSentIndex > currentBufferLength) {
+        _keyboardBufferSentIndex = currentBufferLength;
+    }
+    if (_keyboardBufferCharacterIndex > currentBufferLength) {
+        _keyboardBufferCharacterIndex = currentBufferLength;
+    }
+    // Look for sent character
+    if (_keyboardBufferCharacterIndex > _keyboardBufferSentIndex) {
+        wkNotYetSent = [self.keyboardBufferString substringFromIndex:_keyboardBufferSentIndex];
+        wkNotYetSent = [wkNotYetSent substringToIndex:_keyboardBufferCharacterIndex-_keyboardBufferSentIndex];
+        range = [wkNotYetSent.uppercaseString rangeOfString:sentCharacter];
+        if (range.location != NSNotFound) {
+            _keyboardBufferSentIndex += range.location+range.length;
+        }
+    }
+    return _keyboardBufferSentIndex;
 }
 
 #pragma mark - Serial Comm Utilities
@@ -700,7 +749,8 @@
 }
 
 #pragma mark - ORSSerialPortDelegate
-
+// Received some status or echo bytes from keyer
+// If keyer is ready to send (not busy, not wait, not nearly full) send any text from typing buffer
 - (void)serialPort:(ORSSerialPort *)serialPort didReceiveData:(NSData *)data
 {
 //    NSLog(@"%s %@", __PRETTY_FUNCTION__, data);
@@ -776,6 +826,8 @@
             } else { // Echo byte
                 NSData* echoAsData = byteToData(v);
                 NSString* echoString = [[NSString alloc] initWithData:echoAsData encoding:NSASCIIStringEncoding];
+                if (echoString.length)
+                    [self updateKeyboardSentIndex:echoString];
                 NSDictionary* preferences = [[NSUserDefaults standardUserDefaults] dictionaryForKey:hostSettingsKeyPath];
                 BOOL paddleEchoback = [preferences[HostPaddleEchoback] boolValue];
                 if (paddleEchoback && self.paddleBreakinState) {
@@ -903,6 +955,11 @@
     self.statusGumdropImage = [NSImage imageNamed:NSImageNameStatusUnavailable];
     self.statusString = @"";
     self.versionString = @"";
+}
+
+- (void)serialPort:(ORSSerialPort *)serialPort didEncounterError:(NSError *)error
+{
+    NSLog(@"%@", [error localizedDescription]);
 }
 
 @end

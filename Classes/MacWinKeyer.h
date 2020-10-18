@@ -19,6 +19,7 @@
     IBOutlet StandaloneSettings* _standaloneSettings;
     
 	NSUInteger _keyboardBufferCharacterIndex;
+    NSUInteger _keyboardBufferSentIndex;
 }
 
 @property BOOL waitState;
@@ -82,6 +83,8 @@
 
 - (void)loadDefaults;
 - (void)insertInput:(NSString*)string;
+- (NSUInteger)updateKeyboardSentIndex:(NSString*)sentCharacter;
+- (void)serialPort:(ORSSerialPort *)serialPort didEncounterError:(NSError *)error;
 
 @end
 
