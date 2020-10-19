@@ -28,8 +28,6 @@
 @property BOOL paddleBreakinState;
 @property BOOL bufferNearlyFullState;
 
-@property NSString* paddleEchoString;
-
 @property (getter = isHostMode) BOOL hostMode;
 
 @property NSString* statusString;
@@ -82,7 +80,6 @@
 - (IBAction)writeEeprom:(id)sender;
 
 - (void)loadDefaults;
-- (void)insertInput:(NSString*)string;
 - (void)textDidChange:(NSNotification *)notification;
 - (NSUInteger)updateKeyboardSentIndex:(NSString*)sentCharacter;
 - (void)serialPort:(ORSSerialPort *)serialPort didEncounterError:(NSError *)error;

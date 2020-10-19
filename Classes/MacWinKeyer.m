@@ -38,7 +38,6 @@
 {
     [[[_keyboardBufferTextView textStorage] mutableString] setString:@""];
     [_keyboardBufferTextView setDelegate:self];
-    self.paddleEchoString = @"";
     self.versionString = @"";
     self.portOpenCloseButtonTitle = @"Open Port";
     [self changeStatusString];
@@ -58,24 +57,6 @@
     } else {
         self.statusString = @"";
         self.versionString = @"";
-    }
-}
-
-- (void)insertInput:(NSString *)string
-{
-    // Sanity test on string
-    BOOL isSingleCharacter = (string.length == 1);
-    if (isSingleCharacter) {
-        unichar character = [string characterAtIndex:0];
-        BOOL isPrintableCharacter = [[NSCharacterSet alphanumericCharacterSet] characterIsMember:character];
-        BOOL isPunctuationCharacter = [[NSCharacterSet punctuationCharacterSet] characterIsMember:character];
-        if (isPrintableCharacter || isPunctuationCharacter) {
-            static const NSInteger displayLength = 60L;
-            self.paddleEchoString = [self.paddleEchoString stringByAppendingString:string];
-            if (self.paddleEchoString.length > displayLength) {
-                self.paddleEchoString = [self.paddleEchoString substringFromIndex:(self.paddleEchoString.length - displayLength)];
-            }
-        }
     }
 }
 
@@ -299,7 +280,6 @@
     _keyboardBufferSentIndex = 0;
     const uint8 command[2] = {kWKImmediateClearBufferCommand, kWKImmediateRequestWinKeyer2StatusCommand};
     [self.winkeyerPort sendData:bytesToData(command, 2)];
-    self.paddleEchoString = @"";
 }
 
 - (IBAction)tune:(id)sender
@@ -678,7 +658,7 @@
     }
 }
 
-/***
+/**
 We track which characters have been sent so we can limit the number characters ahead
 we send to the WK chip.  This allows us to show which characters have been sent
 and edit input not yet forwarded to the WK.
@@ -845,15 +825,6 @@ word spaces, line breaks, or other unsendable characters.
                 NSString* echoString = [[NSString alloc] initWithData:echoAsData encoding:NSASCIIStringEncoding];
                 if (echoString.length)
                     [self updateKeyboardSentIndex:echoString];
-                NSDictionary* preferences = [[NSUserDefaults standardUserDefaults] dictionaryForKey:hostSettingsKeyPath];
-                BOOL paddleEchoback = [preferences[HostPaddleEchoback] boolValue];
-                if (paddleEchoback && self.paddleBreakinState) {
-                    [self insertInput:echoString];
-                }
-                BOOL serialEchoback = [preferences[HostSerialEchoback] boolValue];
-                if (serialEchoback && !self.paddleBreakinState) {
-                    [self insertInput:echoString];
-                }
             }
         }
     }

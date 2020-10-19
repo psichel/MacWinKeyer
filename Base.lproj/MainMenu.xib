@@ -15,32 +15,32 @@
         <window title="Host Mode Keyer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="HostModeKeyer" animationBehavior="default" tabbingMode="disallowed" id="g6K-Pc-kbv" userLabel="Host Mode Keyer Window">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="248" y="266" width="436" height="478"/>
+            <rect key="contentRect" x="248" y="266" width="436" height="329"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <value key="minSize" type="size" width="436" height="327"/>
             <view key="contentView" id="Pgs-0c-1Jy">
-                <rect key="frame" x="0.0" y="0.0" width="436" height="478"/>
+                <rect key="frame" x="0.0" y="0.0" width="436" height="329"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box autoresizesSubviews="NO" fixedFrame="YES" boxType="oldStyle" borderType="line" title="Keyboard Morse" translatesAutoresizingMaskIntoConstraints="NO" id="S0G-uS-MNF">
-                        <rect key="frame" x="20" y="190" width="396" height="234"/>
+                        <rect key="frame" x="20" y="127" width="396" height="148"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <view key="contentView" id="Lyl-jU-5tP">
-                            <rect key="frame" x="1" y="1" width="394" height="218"/>
+                            <rect key="frame" x="1" y="1" width="394" height="132"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWZ-hS-htO">
-                                    <rect key="frame" x="5" y="5" width="384" height="208"/>
+                                    <rect key="frame" x="5" y="5" width="384" height="122"/>
                                     <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="vuP-3q-9mt">
-                                        <rect key="frame" x="0.0" y="0.0" width="369" height="208"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="369" height="122"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="diH-T5-cIn">
-                                                <rect key="frame" x="0.0" y="0.0" width="369" height="208"/>
+                                            <textView toolTip="Enter text to send as morse code here." importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="diH-T5-cIn">
+                                                <rect key="frame" x="0.0" y="0.0" width="369" height="122"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                <size key="minSize" width="369" height="208"/>
+                                                <size key="minSize" width="369" height="122"/>
                                                 <size key="maxSize" width="374" height="10000000"/>
                                                 <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             </textView>
@@ -51,7 +51,7 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                     </scroller>
                                     <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="SOZ-kj-eM8">
-                                        <rect key="frame" x="369" y="0.0" width="15" height="208"/>
+                                        <rect key="frame" x="369" y="0.0" width="15" height="122"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </scroller>
                                 </scrollView>
@@ -62,29 +62,6 @@
                                 <constraint firstAttribute="trailing" secondItem="QWZ-hS-htO" secondAttribute="trailing" constant="5" id="XkT-Hu-P81"/>
                                 <constraint firstItem="QWZ-hS-htO" firstAttribute="leading" secondItem="Lyl-jU-5tP" secondAttribute="leading" constant="5" id="YPo-iW-Kyz"/>
                             </constraints>
-                        </view>
-                    </box>
-                    <box autoresizesSubviews="NO" fixedFrame="YES" boxType="oldStyle" borderType="line" title="Echoed Morse" translatesAutoresizingMaskIntoConstraints="NO" id="1z8-1n-fRY">
-                        <rect key="frame" x="20" y="120" width="396" height="62"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <view key="contentView" id="xdi-u7-Fq0">
-                            <rect key="frame" x="1" y="1" width="394" height="46"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            <subviews>
-                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4rm-vi-5JG">
-                                    <rect key="frame" x="10" y="11" width="374" height="24"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                    <string key="toolTip">Shows characters send by paddle when Paddle Echo is checked in Host Mode Settings. Shows characters sent by computer when Serial Echo is checked.</string>
-                                    <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="4H6-4d-Nff">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                    <connections>
-                                        <binding destination="494" name="value" keyPath="self.paddleEchoString" id="wCY-4T-KhK"/>
-                                    </connections>
-                                </textField>
-                            </subviews>
                         </view>
                     </box>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ka1-vR-9Rl">
@@ -128,7 +105,7 @@ Gw
                         </connections>
                     </button>
                     <imageView toolTip="Red when WinKeyer is unavailable, yellow when busy, green when idle." horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3t7-ay-SZ5" userLabel="Green Dot">
-                        <rect key="frame" x="390" y="435" width="26" height="26"/>
+                        <rect key="frame" x="390" y="286" width="26" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSStatusAvailable" id="zIR-NY-eNM"/>
                         <connections>
@@ -136,7 +113,7 @@ Gw
                         </connections>
                     </imageView>
                     <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CLZ-jy-NEa">
-                        <rect key="frame" x="102" y="435" width="19" height="27"/>
+                        <rect key="frame" x="102" y="286" width="19" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <stepperCell key="cell" continuous="YES" alignment="left" minValue="5" maxValue="99" doubleValue="5" id="hUu-3v-pe6"/>
                         <connections>
@@ -152,7 +129,7 @@ Gw
                         </connections>
                     </stepper>
                     <textField toolTip="Sending Speed in WPM, between Miminum and Maxium in Host Mode Settings. Disabled when Pot Lock is checked." verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HXe-L4-F5w">
-                        <rect key="frame" x="70" y="437" width="27" height="22"/>
+                        <rect key="frame" x="70" y="288" width="27" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" usesSingleLineMode="YES" id="x4q-9k-aO2">
                             <numberFormatter key="formatter" formatterBehavior="default10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="JGX-CX-SoB">
@@ -180,7 +157,7 @@ Gw
                         </connections>
                     </textField>
                     <button toolTip="When checked, sending speed can be changed only by using the SPEED pot." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lhq-p7-s6S">
-                        <rect key="frame" x="134" y="441" width="80" height="14"/>
+                        <rect key="frame" x="134" y="292" width="80" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Pot Lock" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="2J4-LH-sWM">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -192,7 +169,7 @@ Gw
                         </connections>
                     </button>
                     <textField toolTip="Sending Speed in WPM, between Miminum and Maxium in Host Mode Settings. Disabled when Pot Lock is checked." horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K0p-tf-obW">
-                        <rect key="frame" x="18" y="440" width="44" height="17"/>
+                        <rect key="frame" x="18" y="291" width="44" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Speed" id="1cA-CC-4F6">
                             <font key="font" metaFont="system"/>
@@ -274,7 +251,7 @@ Gw
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-1239" y="-634"/>
+            <point key="canvasLocation" x="-1239" y="-708.5"/>
         </window>
         <window title="Host Mode Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="HostModeSettings" animationBehavior="default" tabbingMode="disallowed" id="9J2-VM-CJq" userLabel="Host Mode Settings Window">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
