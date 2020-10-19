@@ -639,21 +639,20 @@
     // Max send length to WK2 chip is 64 bytes
     // We choose to only send upto 5 characters ahead so the remaining
     // characters in the text field can be edited.
-    // This means the observedValue of the input field might not change,
-    // so we check back as characters are echoed.
+    // Notice the text field may not change as characters are sent so we update on echo
     if (_keyboardBufferCharacterIndex < [[_keyboardBufferTextView string] length]) {
         // extract the new data to send
         NSString *keyboardString = [_keyboardBufferTextView string];
         NSString* stringToSend = [keyboardString substringFromIndex:_keyboardBufferCharacterIndex];
         NSUInteger wkCharactersInFlight = _keyboardBufferCharacterIndex - _keyboardBufferSentIndex;
         if (wkCharactersInFlight < 5) {
-            if (wkCharactersInFlight + stringToSend.length > 5) {                        // forward up 5 characters ahead
-                stringToSend = [stringToSend substringToIndex:5-wkCharactersInFlight];
+            NSUInteger desired = 5 - wkCharactersInFlight;
+            NSUInteger available = stringToSend.length;
+            if (available > desired) {
+                stringToSend = [stringToSend substringToIndex:desired];
             }
-//            NSLog(@"characterIndex: %lu, sentIndex: %lu, sending:%@",
-//                  _keyboardBufferCharacterIndex, _keyboardBufferSentIndex, stringToSend);
-            _keyboardBufferCharacterIndex = _keyboardBufferCharacterIndex + stringToSend.length;
             [self sendAsciiString:stringToSend];
+            _keyboardBufferCharacterIndex = _keyboardBufferCharacterIndex + stringToSend.length;
         }
     }
 }
@@ -690,6 +689,8 @@ word spaces, line breaks, or other unsendable characters.
         range = [wkNotYetSent.uppercaseString rangeOfString:sentCharacter];
         if (range.location != NSNotFound) {
             _keyboardBufferSentIndex += range.location+range.length;
+            NSUInteger wkCharactersInFlight = _keyboardBufferCharacterIndex - _keyboardBufferSentIndex;
+            if (wkCharactersInFlight < 5) [self sendKeyboardBuffer];
         }
     }
     // Indicate which characters have been sent with text background color
