@@ -2,8 +2,7 @@
 //  WK24MacAppDelegate.h
 //  WK24Mac
 //
-//  Created by James  T. Rogers on 4/11/11.
-//  Copyright 2011 Jim Rogers, W4ATK. All rights reserved.
+//  Created by James  T. Rogers, W4ATK on 4/11/11.
 //
 
 #import <Cocoa/Cocoa.h>
@@ -18,6 +17,7 @@
     IBOutlet NSProgressIndicator* _busyReadWriteProgressWK3;
     IBOutlet StandaloneSettings* _standaloneSettings;
     IBOutlet NSTextView* _keyboardBufferTextView;
+    IBOutlet NSWindow* _myWindow;
     
 	NSUInteger _keyboardBufferCharacterIndex;   // Position of next character to send to WinKeyer.
     NSUInteger _keyboardBufferSentIndex;        // Position of next character not yet output as Morse code.
