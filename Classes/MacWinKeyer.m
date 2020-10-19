@@ -1,10 +1,24 @@
-//
-//  WK24MacAppDelegate.m
-//  WK24Mac
-//
-//  Created by James  T. Rogers on 4/11/11.
-//  Copyright 2011 Jim Rogers, W4ATK. All rights reserved.
-//
+/**
+WK24MacAppDelegate.m
+WK24Mac
+ 
+Abstract:
+This file contains code that implements the following key features:
+ - Send commands to the WK (WinKeyer) chip
+ - Send typed characters to the WK;
+ - Handle command responses and echoed characters received from the WK;
+ - Act as ViewController to manage the User Interface
+
+Created by James  T. Rogers W4ATK on 4/11/11.
+Many updates by Bill Myers K1GQ
+ 
+2020-08-18 Updated by Peter Sichel K1AV to support basic QSOs:
+ - Input area is now a scrollable TextView to allow typing as many lines as you want.
+ - Use text background color to visualize which characters have been sent as Morse code or are pending in the keyer.
+ - Limit number of characters ahead sent to the keyer (currently 5).
+ - Allow correcting (backspace/edit) type ahead characters that have not yet been sent to the keyer.
+ - Remove the now redundant "Echoed Morse" TextField
+*/
 
 #import "MacWinKeyer.h"
 @import ORSSerial;
@@ -36,6 +50,7 @@
 
 - (void)awakeFromNib
 {
+    [_keyboardBufferTextView setFont:[NSFont fontWithName:@"Helvetica" size:18]];
     [[[_keyboardBufferTextView textStorage] mutableString] setString:@""];
     [_keyboardBufferTextView setDelegate:self];
     self.versionString = @"";
@@ -622,24 +637,26 @@
 - (void)textDidChange:(NSNotification *)notification {
     // adjust for backspace if needed
     NSUInteger currentBufferLength = [[_keyboardBufferTextView string] length];
-    if (_keyboardBufferSentIndex > currentBufferLength) {
-        _keyboardBufferSentIndex = currentBufferLength;
-    }
     if (_keyboardBufferCharacterIndex > currentBufferLength) {
         _keyboardBufferCharacterIndex = currentBufferLength;
     }
-    // send characters as needed
+    if (_keyboardBufferSentIndex > _keyboardBufferCharacterIndex) {
+        _keyboardBufferSentIndex = _keyboardBufferCharacterIndex;
+    }
+    // send characters to keyer as needed
     if (self.winkeyerPort.isOpen && self.isHostMode) {
         [self sendKeyboardBuffer];
     }
 }
 
+/**
+Send keyboard input to WinKeyer
+ 
+Max send length to WK2 chip is 64 bytes.
+We choose to only send upto 5 characters ahead so the remaining characters in the NSTextView can be edited.
+*/
 - (void)sendKeyboardBuffer
 {
-    // Max send length to WK2 chip is 64 bytes
-    // We choose to only send upto 5 characters ahead so the remaining
-    // characters in the text field can be edited.
-    // Notice the text field may not change as characters are sent so we update on echo
     if (_keyboardBufferCharacterIndex < [[_keyboardBufferTextView string] length]) {
         // extract the new data to send
         NSString *keyboardString = [_keyboardBufferTextView string];
@@ -651,21 +668,25 @@
             if (available > desired) {
                 stringToSend = [stringToSend substringToIndex:desired];
             }
-            [self sendAsciiString:stringToSend];
             _keyboardBufferCharacterIndex = _keyboardBufferCharacterIndex + stringToSend.length;
+            NSString *safeToSend = [stringToSend stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+            [self sendAsciiString:safeToSend];
         }
     }
 }
 
 /**
-We track which characters have been sent so we can limit the number characters ahead
-we send to the WK chip.  This allows us to show which characters have been sent
-and edit input not yet forwarded to the WK.
+We track which characters have been sent as morse code so we can limit the number
+of characters ahead we send to the WK chip.  This allows us to show which characters
+have been sent and edit input not yet forwarded to the WK.
  
 Find next occurance of sent character (serial port data echo byte) in previously
-unsent keyboard buffer. Update sentIndex to just after last character sent.
+unsent characters in flight. Update sentIndex to just after last character sent.
 Notice only sendable morse characters are echoed so we search forward to skip
 word spaces, line breaks, or other unsendable characters.
+ 
+As previous characters are completed, we check if there is room for more and call
+sendKeyboardBuffer as needed.
  */
 - (NSUInteger)updateKeyboardSentIndex:(NSString*)sentCharacter {
     NSString *wkNotYetSent;
@@ -675,11 +696,11 @@ word spaces, line breaks, or other unsendable characters.
     // the keyboard buffer might be shorter than the sent or character index.
     // If so, we update them to point to the end of the buffer.
     currentBufferLength = [[_keyboardBufferTextView string] length];
-    if (_keyboardBufferSentIndex > currentBufferLength) {
-        _keyboardBufferSentIndex = currentBufferLength;
-    }
     if (_keyboardBufferCharacterIndex > currentBufferLength) {
         _keyboardBufferCharacterIndex = currentBufferLength;
+    }
+    if (_keyboardBufferSentIndex > _keyboardBufferCharacterIndex) {
+        _keyboardBufferSentIndex = _keyboardBufferCharacterIndex;
     }
     // Look for sent character
     if (_keyboardBufferCharacterIndex > _keyboardBufferSentIndex) {
@@ -693,13 +714,16 @@ word spaces, line breaks, or other unsendable characters.
             if (wkCharactersInFlight < 5) [self sendKeyboardBuffer];
         }
     }
-    // Indicate which characters have been sent with text background color
+    // Indicate sent (green) versus pending (yellow) characters with text background color
     NSDictionary *attrsGreenText = @{ NSBackgroundColorAttributeName : [NSColor greenColor] };
     NSDictionary *attrsYellowText = @{ NSBackgroundColorAttributeName : [NSColor yellowColor] };
     NSMutableAttributedString *newAttrString = [[NSMutableAttributedString alloc] initWithString:[_keyboardBufferTextView string]];
     [newAttrString addAttributes:attrsGreenText range:NSMakeRange(0, _keyboardBufferSentIndex)];
     [newAttrString addAttributes:attrsYellowText
                            range:NSMakeRange(_keyboardBufferSentIndex, _keyboardBufferCharacterIndex - _keyboardBufferSentIndex)];
+    // set font and size
+    NSFont *font = [NSFont fontWithName:@"Helvetica" size:18.0];
+    [newAttrString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, newAttrString.length)];
     [[_keyboardBufferTextView textStorage] setAttributedString:newAttrString];
     
     return _keyboardBufferSentIndex;
@@ -948,6 +972,12 @@ word spaces, line breaks, or other unsendable characters.
 
 - (void)serialPort:(ORSSerialPort *)serialPort didEncounterError:(NSError *)error
 {
+    NSAlert* alert = [[NSAlert alloc] init];
+    alert.messageText = [NSString stringWithFormat:@"Connection to keyer could not be established. Reason: %@", [error localizedDescription]];
+    alert.informativeText = [NSString stringWithFormat:@"Suggested remedies: Open Serial Port settings under Window menu; Ensure you have selected the correct device port; Hot plug Keyer USB connection to reset it; reopen the device port."];
+    alert.alertStyle = NSAlertStyleCritical;
+    [alert runModal];
+    
     NSLog(@"%@", [error localizedDescription]);
 }
 

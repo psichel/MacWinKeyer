@@ -19,8 +19,10 @@
     IBOutlet StandaloneSettings* _standaloneSettings;
     IBOutlet NSTextView* _keyboardBufferTextView;
     
-	NSUInteger _keyboardBufferCharacterIndex;
-    NSUInteger _keyboardBufferSentIndex;
+	NSUInteger _keyboardBufferCharacterIndex;   // Position of next character to send to WinKeyer.
+    NSUInteger _keyboardBufferSentIndex;        // Position of next character not yet output as Morse code.
+    // The difference between these two positions are the "characters in flight".
+    // That is, characters sent to the keyer but not yet output as Morse code.
 }
 
 @property BOOL waitState;

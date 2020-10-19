@@ -35,7 +35,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="369" height="122"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <textView toolTip="Enter text to send as morse code here." importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="diH-T5-cIn">
+                                            <textView toolTip="Enter text to send. Background color: green - sent by keyer; yellow - pending in keyer; white -  editable type ahead." importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="diH-T5-cIn">
                                                 <rect key="frame" x="0.0" y="0.0" width="369" height="122"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
