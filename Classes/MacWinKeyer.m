@@ -29,7 +29,6 @@
         self.version2 = YES; // default for hidden bindings
         self.version3 = !self.version2;
         [NSApp activateIgnoringOtherApps:YES];
-        [self addObserver:self forKeyPath:@"keyboardBufferString" options:NSKeyValueObservingOptionNew context:nil];
 	}
 	return self;
 }
@@ -37,7 +36,8 @@
 
 - (void)awakeFromNib
 {
-    self.keyboardBufferString = @"";
+    [[[_keyboardBufferTextView textStorage] mutableString] setString:@""];
+    [_keyboardBufferTextView setDelegate:self];
     self.paddleEchoString = @"";
     self.versionString = @"";
     self.portOpenCloseButtonTitle = @"Open Port";
@@ -293,7 +293,8 @@
 
 - (IBAction)clearKeyboardBuffer:(id)sender	// stops sending immediately. clears the chips buffer.
 {
-    self.keyboardBufferString = @"";
+    [[[_keyboardBufferTextView textStorage] mutableString] setString:@""];
+    
 	_keyboardBufferCharacterIndex = 0;
     _keyboardBufferSentIndex = 0;
     const uint8 command[2] = {kWKImmediateClearBufferCommand, kWKImmediateRequestWinKeyer2StatusCommand};
@@ -637,10 +638,17 @@
     }
 }
 
-#pragma mark - Keyboard text field observer
-// Detect when new characters have been typed
-- (void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change context:(void*)context
-{
+#pragma mark - TextView Delegate
+- (void)textDidChange:(NSNotification *)notification {
+    // adjust for backspace if needed
+    NSUInteger currentBufferLength = [[_keyboardBufferTextView string] length];
+    if (_keyboardBufferSentIndex > currentBufferLength) {
+        _keyboardBufferSentIndex = currentBufferLength;
+    }
+    if (_keyboardBufferCharacterIndex > currentBufferLength) {
+        _keyboardBufferCharacterIndex = currentBufferLength;
+    }
+    // send characters as needed
     if (self.winkeyerPort.isOpen && self.isHostMode) {
         [self sendKeyboardBuffer];
     }
@@ -653,21 +661,20 @@
     // characters in the text field can be edited.
     // This means the observedValue of the input field might not change,
     // so we check back as characters are echoed.
-    if (_keyboardBufferCharacterIndex < self.keyboardBufferString.length) {
+    if (_keyboardBufferCharacterIndex < [[_keyboardBufferTextView string] length]) {
         // extract the new data to send
-        NSString* stringToSend = [self.keyboardBufferString substringFromIndex:_keyboardBufferCharacterIndex];
+        NSString *keyboardString = [_keyboardBufferTextView string];
+        NSString* stringToSend = [keyboardString substringFromIndex:_keyboardBufferCharacterIndex];
         NSUInteger wkCharactersInFlight = _keyboardBufferCharacterIndex - _keyboardBufferSentIndex;
         if (wkCharactersInFlight < 5) {
             if (wkCharactersInFlight + stringToSend.length > 5) {                        // forward up 5 characters ahead
                 stringToSend = [stringToSend substringToIndex:5-wkCharactersInFlight];
             }
-            NSLog(@"characterIndex: %lu, sentIndex: %lu, sending:%@",
-                  _keyboardBufferCharacterIndex, _keyboardBufferSentIndex, stringToSend);
+//            NSLog(@"characterIndex: %lu, sentIndex: %lu, sending:%@",
+//                  _keyboardBufferCharacterIndex, _keyboardBufferSentIndex, stringToSend);
             _keyboardBufferCharacterIndex = _keyboardBufferCharacterIndex + stringToSend.length;
             [self sendAsciiString:stringToSend];
         }
-        
-
     }
 }
 
@@ -688,7 +695,7 @@ word spaces, line breaks, or other unsendable characters.
     // Caution: if the user presses backspace,
     // the keyboard buffer might be shorter than the sent or character index.
     // If so, we update them to point to the end of the buffer.
-    currentBufferLength = self.keyboardBufferString.length;
+    currentBufferLength = [[_keyboardBufferTextView string] length];
     if (_keyboardBufferSentIndex > currentBufferLength) {
         _keyboardBufferSentIndex = currentBufferLength;
     }
@@ -697,13 +704,23 @@ word spaces, line breaks, or other unsendable characters.
     }
     // Look for sent character
     if (_keyboardBufferCharacterIndex > _keyboardBufferSentIndex) {
-        wkNotYetSent = [self.keyboardBufferString substringFromIndex:_keyboardBufferSentIndex];
+        NSString *keyboardString = [_keyboardBufferTextView string];
+        wkNotYetSent = [keyboardString substringFromIndex:_keyboardBufferSentIndex];
         wkNotYetSent = [wkNotYetSent substringToIndex:_keyboardBufferCharacterIndex-_keyboardBufferSentIndex];
         range = [wkNotYetSent.uppercaseString rangeOfString:sentCharacter];
         if (range.location != NSNotFound) {
             _keyboardBufferSentIndex += range.location+range.length;
         }
     }
+    // Indicate which characters have been sent with text background color
+    NSDictionary *attrsGreenText = @{ NSBackgroundColorAttributeName : [NSColor greenColor] };
+    NSDictionary *attrsYellowText = @{ NSBackgroundColorAttributeName : [NSColor yellowColor] };
+    NSMutableAttributedString *newAttrString = [[NSMutableAttributedString alloc] initWithString:[_keyboardBufferTextView string]];
+    [newAttrString addAttributes:attrsGreenText range:NSMakeRange(0, _keyboardBufferSentIndex)];
+    [newAttrString addAttributes:attrsYellowText
+                           range:NSMakeRange(_keyboardBufferSentIndex, _keyboardBufferCharacterIndex - _keyboardBufferSentIndex)];
+    [[_keyboardBufferTextView textStorage] setAttributedString:newAttrString];
+    
     return _keyboardBufferSentIndex;
 }
 

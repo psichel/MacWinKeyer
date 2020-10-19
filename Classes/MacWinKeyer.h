@@ -12,11 +12,12 @@
 @class StandaloneSettings;
 @class CCNPreferencesWindowController;
 
-@interface MacWinKeyer : NSObject <NSApplicationDelegate, NSTextFieldDelegate, ORSSerialPortDelegate>
+@interface MacWinKeyer : NSObject <NSApplicationDelegate, NSTextViewDelegate, ORSSerialPortDelegate>
 {
     IBOutlet NSProgressIndicator* _busyReadWriteProgressWK2;
     IBOutlet NSProgressIndicator* _busyReadWriteProgressWK3;
     IBOutlet StandaloneSettings* _standaloneSettings;
+    IBOutlet NSTextView* _keyboardBufferTextView;
     
 	NSUInteger _keyboardBufferCharacterIndex;
     NSUInteger _keyboardBufferSentIndex;
@@ -27,7 +28,6 @@
 @property BOOL paddleBreakinState;
 @property BOOL bufferNearlyFullState;
 
-@property NSString* keyboardBufferString;
 @property NSString* paddleEchoString;
 
 @property (getter = isHostMode) BOOL hostMode;
@@ -83,6 +83,7 @@
 
 - (void)loadDefaults;
 - (void)insertInput:(NSString*)string;
+- (void)textDidChange:(NSNotification *)notification;
 - (NSUInteger)updateKeyboardSentIndex:(NSString*)sentCharacter;
 - (void)serialPort:(ORSSerialPort *)serialPort didEncounterError:(NSError *)error;
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17156" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17156"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,38 +15,53 @@
         <window title="Host Mode Keyer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="HostModeKeyer" animationBehavior="default" tabbingMode="disallowed" id="g6K-Pc-kbv" userLabel="Host Mode Keyer Window">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="248" y="266" width="436" height="327"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <rect key="contentRect" x="248" y="266" width="436" height="478"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <value key="minSize" type="size" width="436" height="327"/>
             <view key="contentView" id="Pgs-0c-1Jy">
-                <rect key="frame" x="0.0" y="0.0" width="436" height="327"/>
+                <rect key="frame" x="0.0" y="0.0" width="436" height="478"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <box autoresizesSubviews="NO" fixedFrame="YES" boxType="oldStyle" borderType="line" title="Keyboard Morse" translatesAutoresizingMaskIntoConstraints="NO" id="S0G-uS-MNF">
-                        <rect key="frame" x="20" y="190" width="396" height="83"/>
+                        <rect key="frame" x="20" y="190" width="396" height="234"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <view key="contentView" id="Lyl-jU-5tP">
-                            <rect key="frame" x="1" y="1" width="394" height="67"/>
+                            <rect key="frame" x="1" y="1" width="394" height="218"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textField toolTip="Type here to send morse code." verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9hM-CG-nkb" userLabel="KeyboardBuffer">
-                                    <rect key="frame" x="10" y="10" width="373" height="48"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="s8W-vg-mlt">
-                                        <font key="font" size="13" name="Menlo-Regular"/>
-                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                    <connections>
-                                        <binding destination="494" name="value" keyPath="self.keyboardBufferString" id="k5h-V1-0h9">
-                                            <dictionary key="options">
-                                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
-                                            </dictionary>
-                                        </binding>
-                                        <outlet property="delegate" destination="494" id="suP-vH-oFi"/>
-                                    </connections>
-                                </textField>
+                                <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWZ-hS-htO">
+                                    <rect key="frame" x="5" y="5" width="384" height="208"/>
+                                    <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="vuP-3q-9mt">
+                                        <rect key="frame" x="0.0" y="0.0" width="369" height="208"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="diH-T5-cIn">
+                                                <rect key="frame" x="0.0" y="0.0" width="369" height="208"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <size key="minSize" width="369" height="208"/>
+                                                <size key="maxSize" width="374" height="10000000"/>
+                                                <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            </textView>
+                                        </subviews>
+                                    </clipView>
+                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="qyd-Ii-n3i">
+                                        <rect key="frame" x="-100" y="-100" width="225" height="15"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                    <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="SOZ-kj-eM8">
+                                        <rect key="frame" x="369" y="0.0" width="15" height="208"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                </scrollView>
                             </subviews>
+                            <constraints>
+                                <constraint firstItem="QWZ-hS-htO" firstAttribute="top" secondItem="Lyl-jU-5tP" secondAttribute="top" constant="5" id="NJP-j0-81Y"/>
+                                <constraint firstAttribute="bottom" secondItem="QWZ-hS-htO" secondAttribute="bottom" constant="5" id="TY3-PM-Ryu"/>
+                                <constraint firstAttribute="trailing" secondItem="QWZ-hS-htO" secondAttribute="trailing" constant="5" id="XkT-Hu-P81"/>
+                                <constraint firstItem="QWZ-hS-htO" firstAttribute="leading" secondItem="Lyl-jU-5tP" secondAttribute="leading" constant="5" id="YPo-iW-Kyz"/>
+                            </constraints>
                         </view>
                     </box>
                     <box autoresizesSubviews="NO" fixedFrame="YES" boxType="oldStyle" borderType="line" title="Echoed Morse" translatesAutoresizingMaskIntoConstraints="NO" id="1z8-1n-fRY">
@@ -113,7 +128,7 @@ Gw
                         </connections>
                     </button>
                     <imageView toolTip="Red when WinKeyer is unavailable, yellow when busy, green when idle." horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3t7-ay-SZ5" userLabel="Green Dot">
-                        <rect key="frame" x="390" y="284" width="26" height="26"/>
+                        <rect key="frame" x="390" y="435" width="26" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSStatusAvailable" id="zIR-NY-eNM"/>
                         <connections>
@@ -121,7 +136,7 @@ Gw
                         </connections>
                     </imageView>
                     <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CLZ-jy-NEa">
-                        <rect key="frame" x="102" y="284" width="19" height="27"/>
+                        <rect key="frame" x="102" y="435" width="19" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <stepperCell key="cell" continuous="YES" alignment="left" minValue="5" maxValue="99" doubleValue="5" id="hUu-3v-pe6"/>
                         <connections>
@@ -137,7 +152,7 @@ Gw
                         </connections>
                     </stepper>
                     <textField toolTip="Sending Speed in WPM, between Miminum and Maxium in Host Mode Settings. Disabled when Pot Lock is checked." verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HXe-L4-F5w">
-                        <rect key="frame" x="70" y="286" width="27" height="22"/>
+                        <rect key="frame" x="70" y="437" width="27" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" usesSingleLineMode="YES" id="x4q-9k-aO2">
                             <numberFormatter key="formatter" formatterBehavior="default10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="JGX-CX-SoB">
@@ -165,7 +180,7 @@ Gw
                         </connections>
                     </textField>
                     <button toolTip="When checked, sending speed can be changed only by using the SPEED pot." fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lhq-p7-s6S">
-                        <rect key="frame" x="134" y="290" width="80" height="14"/>
+                        <rect key="frame" x="134" y="441" width="80" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Pot Lock" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="2J4-LH-sWM">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -177,7 +192,7 @@ Gw
                         </connections>
                     </button>
                     <textField toolTip="Sending Speed in WPM, between Miminum and Maxium in Host Mode Settings. Disabled when Pot Lock is checked." horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K0p-tf-obW">
-                        <rect key="frame" x="18" y="289" width="44" height="17"/>
+                        <rect key="frame" x="18" y="440" width="44" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Speed" id="1cA-CC-4F6">
                             <font key="font" metaFont="system"/>
@@ -259,16 +274,13 @@ Gw
                     </button>
                 </subviews>
             </view>
-            <connections>
-                <outlet property="initialFirstResponder" destination="9hM-CG-nkb" id="VlW-Dh-HOc"/>
-            </connections>
-            <point key="canvasLocation" x="-1355" y="-623.5"/>
+            <point key="canvasLocation" x="-1239" y="-634"/>
         </window>
         <window title="Host Mode Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="HostModeSettings" animationBehavior="default" tabbingMode="disallowed" id="9J2-VM-CJq" userLabel="Host Mode Settings Window">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="248" y="266" width="499" height="652"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" id="x00-Uj-6dt">
                 <rect key="frame" x="0.0" y="0.0" width="499" height="652"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -1262,7 +1274,7 @@ Gw
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="248" y="266" width="443" height="200"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" id="HhA-kl-jHR">
                 <rect key="frame" x="0.0" y="0.0" width="443" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -1272,7 +1284,7 @@ Gw
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="jCl-pY-Des" id="R9m-Oo-YBH">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
+                            <font key="font" metaFont="menu"/>
                             <menu key="menu" title="OtherViews" id="ULa-xf-e1D">
                                 <items>
                                     <menuItem title="Item 1" state="on" id="jCl-pY-Des"/>
@@ -1339,7 +1351,7 @@ Gw
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="248" y="266" width="499" height="662"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" id="9Ya-iM-ZZg">
                 <rect key="frame" x="0.0" y="0.0" width="499" height="662"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -2717,6 +2729,7 @@ Gw
             <connections>
                 <outlet property="_busyReadWriteProgressWK2" destination="oZa-2T-CYQ" id="QXr-4m-j6O"/>
                 <outlet property="_busyReadWriteProgressWK3" destination="ey3-9a-ZCG" id="43b-bZ-Rd5"/>
+                <outlet property="_keyboardBufferTextView" destination="diH-T5-cIn" id="qt1-Cd-vQk"/>
                 <outlet property="_standaloneSettings" destination="B7E-n6-Tgb" id="8oX-4c-azk"/>
             </connections>
         </customObject>
@@ -2762,7 +2775,7 @@ Gw
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="248" y="266" width="1052" height="731"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" id="6bT-hg-SEe">
                 <rect key="frame" x="0.0" y="0.0" width="1052" height="731"/>
                 <autoresizingMask key="autoresizingMask"/>
