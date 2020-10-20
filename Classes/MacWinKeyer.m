@@ -17,7 +17,7 @@ Many updates by Bill Myers K1GQ
  - Use text background color to visualize which characters have been sent as Morse code or are pending in the keyer.
  - Limit number of characters ahead sent to the keyer (currently 5).
  - Allow correcting (backspace/edit) type ahead characters that have not yet been sent to the keyer.
- - Remove the now redundant "Echoed Morse" TextField
+ - Remove the now redundant "Echoed Morse" TextField.
 */
 
 #import "MacWinKeyer.h"
@@ -57,6 +57,7 @@ Many updates by Bill Myers K1GQ
     [_keyboardBufferTextView setFont:[NSFont fontWithName:@"Helvetica" size:18]];
     [[[_keyboardBufferTextView textStorage] mutableString] setString:@""];
     [_keyboardBufferTextView setDelegate:self];
+    [_myWindow makeFirstResponder:_keyboardBufferTextView];
     self.versionString = @"";
     self.portOpenCloseButtonTitle = @"Open Port";
     [self changeStatusString];

@@ -2704,6 +2704,7 @@ Gw
                 <outlet property="_busyReadWriteProgressWK2" destination="oZa-2T-CYQ" id="QXr-4m-j6O"/>
                 <outlet property="_busyReadWriteProgressWK3" destination="ey3-9a-ZCG" id="43b-bZ-Rd5"/>
                 <outlet property="_keyboardBufferTextView" destination="diH-T5-cIn" id="qt1-Cd-vQk"/>
+                <outlet property="_myWindow" destination="g6K-Pc-kbv" id="LHg-ov-Ckw"/>
                 <outlet property="_standaloneSettings" destination="B7E-n6-Tgb" id="8oX-4c-azk"/>
                 <outlet property="pauseButton" destination="Yxb-sc-XPO" id="WcZ-xT-PDB"/>
             </connections>
