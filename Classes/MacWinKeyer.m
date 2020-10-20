@@ -27,6 +27,10 @@ Many updates by Bill Myers K1GQ
 #import "WinKeyerRegisters.h"
 #import "Preferences.h"
 
+@interface MacWinKeyer ()
+@property IBOutlet NSButton* pauseButton;
+@end
+
 #pragma mark - TODO
 
 // Echo doesn't appear until after first esc (Clear)
@@ -287,7 +291,7 @@ Many updates by Bill Myers K1GQ
     [self sendAsciiString:message];
 }
 
-- (IBAction)clearKeyboardBuffer:(id)sender	// stops sending immediately. clears the chips buffer.
+- (IBAction)clearKeyboardBuffer:(id)sender	// stops sending immediately. clears the chip's buffer.
 {
     [[[_keyboardBufferTextView textStorage] mutableString] setString:@""];
     
@@ -295,6 +299,8 @@ Many updates by Bill Myers K1GQ
     _keyboardBufferSentIndex = 0;
     const uint8 command[2] = {kWKImmediateClearBufferCommand, kWKImmediateRequestWinKeyer2StatusCommand};
     [self.winkeyerPort sendData:bytesToData(command, 2)];
+    // ClearBuffer turns off Pause
+    self.pauseButton.state = NSOffState;
 }
 
 - (IBAction)tune:(id)sender
