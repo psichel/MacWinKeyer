@@ -10,7 +10,6 @@
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
-		AD5A564C1EA63F7D00F71F9E /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = AD5A564B1EA63F7D00F71F9E /* dsa_pub.pem */; };
 		AD79F4A9253F1E0100EA2205 /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = AD79F4A8253F1E0100EA2205 /* ORSSerial */; };
 		AD98926F1AA9D50E00C970B7 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = AD98926E1AA9D50E00C970B7 /* Preferences.m */; };
 		ADA1934E1AABAB5600DC5C29 /* Credits.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = ADA1934C1AABAB5600DC5C29 /* Credits.rtfd */; };
@@ -34,7 +33,6 @@
 		AD3A5004220E435D00471E24 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/PreferencesWinKeyerIcon.png; sourceTree = "<group>"; };
 		AD3A5005220E435E00471E24 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "en.lproj/PreferencesWinKeyerIcon@2x.png"; sourceTree = "<group>"; };
 		AD4745AE227CC45A000D4171 /* MacWinKeyer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacWinKeyer.entitlements; sourceTree = "<group>"; };
-		AD5A564B1EA63F7D00F71F9E /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		AD98926D1AA9D50E00C970B7 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Preferences.h; path = Classes/Preferences.h; sourceTree = "<group>"; };
 		AD98926E1AA9D50E00C970B7 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Preferences.m; path = Classes/Preferences.m; sourceTree = "<group>"; };
 		ADA193501AAC904800DC5C29 /* WinKeyerRegisters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WinKeyerRegisters.h; path = Classes/WinKeyerRegisters.h; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 			children = (
 				ADE760E21EA9417C00FFE2DB /* PreferencesWinKeyerIcon.png */,
 				ADE760E41EA9417C00FFE2DB /* PreferencesWinKeyerIcon@2x.png */,
-				AD5A564B1EA63F7D00F71F9E /* dsa_pub.pem */,
 				ADA1934C1AABAB5600DC5C29 /* Credits.rtfd */,
 				ADA732261A9A2FBC0075A598 /* Media.xcassets */,
 				ADA7321D1A9A22570075A598 /* MacWinKeyer-Info.plist */,
@@ -206,7 +203,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADE760E61EA9417C00FFE2DB /* PreferencesWinKeyerIcon.png in Resources */,
-				AD5A564C1EA63F7D00F71F9E /* dsa_pub.pem in Resources */,
 				ADA1934E1AABAB5600DC5C29 /* Credits.rtfd in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				ADE760E71EA9417C00FFE2DB /* PreferencesWinKeyerIcon@2x.png in Resources */,
