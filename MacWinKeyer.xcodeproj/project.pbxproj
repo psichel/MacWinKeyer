@@ -11,6 +11,7 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		AD79F4A9253F1E0100EA2205 /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = AD79F4A8253F1E0100EA2205 /* ORSSerial */; };
+		AD79F4AF253F40C900EA2205 /* DecimalDigitsFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = AD79F4AD253F3F7700EA2205 /* DecimalDigitsFormatter.m */; };
 		AD98926F1AA9D50E00C970B7 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = AD98926E1AA9D50E00C970B7 /* Preferences.m */; };
 		ADA1934E1AABAB5600DC5C29 /* Credits.rtfd in Resources */ = {isa = PBXBuildFile; fileRef = ADA1934C1AABAB5600DC5C29 /* Credits.rtfd */; };
 		ADA193521AAC906900DC5C29 /* WinKeyerRegisters.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA193511AAC906900DC5C29 /* WinKeyerRegisters.m */; };
@@ -33,6 +34,8 @@
 		AD3A5004220E435D00471E24 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = en.lproj/PreferencesWinKeyerIcon.png; sourceTree = "<group>"; };
 		AD3A5005220E435E00471E24 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "en.lproj/PreferencesWinKeyerIcon@2x.png"; sourceTree = "<group>"; };
 		AD4745AE227CC45A000D4171 /* MacWinKeyer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacWinKeyer.entitlements; sourceTree = "<group>"; };
+		AD79F4AC253F3F7700EA2205 /* DecimalDigitsFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DecimalDigitsFormatter.h; path = Classes/DecimalDigitsFormatter.h; sourceTree = "<group>"; };
+		AD79F4AD253F3F7700EA2205 /* DecimalDigitsFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DecimalDigitsFormatter.m; path = Classes/DecimalDigitsFormatter.m; sourceTree = "<group>"; };
 		AD98926D1AA9D50E00C970B7 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Preferences.h; path = Classes/Preferences.h; sourceTree = "<group>"; };
 		AD98926E1AA9D50E00C970B7 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Preferences.m; path = Classes/Preferences.m; sourceTree = "<group>"; };
 		ADA193501AAC904800DC5C29 /* WinKeyerRegisters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WinKeyerRegisters.h; path = Classes/WinKeyerRegisters.h; sourceTree = "<group>"; };
@@ -78,6 +81,8 @@
 				ADA193501AAC904800DC5C29 /* WinKeyerRegisters.h */,
 				ADA193511AAC906900DC5C29 /* WinKeyerRegisters.m */,
 				ADA9FE231AAA07F200553FFB /* WinKeyerTypes.h */,
+				AD79F4AC253F3F7700EA2205 /* DecimalDigitsFormatter.h */,
+				AD79F4AD253F3F7700EA2205 /* DecimalDigitsFormatter.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD79F4AF253F40C900EA2205 /* DecimalDigitsFormatter.m in Sources */,
 				ADA7320C1A98CD0D0075A598 /* WinKeyerConstants.m in Sources */,
 				ADF63C311AAB5CA900B47BA2 /* StandaloneSettings.m in Sources */,
 				ADA732251A9A2DA10075A598 /* MacWinKeyer.m in Sources */,
