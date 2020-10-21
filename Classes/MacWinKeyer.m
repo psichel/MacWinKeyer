@@ -677,14 +677,15 @@ We choose to only send upto 5 characters ahead so the remaining characters in th
             }
             _keyboardBufferCharacterIndex = _keyboardBufferCharacterIndex + stringToSend.length;
             // remove control characters
+            NSString *safeString = @"";
             NSUInteger len = [stringToSend length];
             for (NSUInteger i=0; i<len; i++) {
                 unichar c = [stringToSend characterAtIndex:i];
-                if ((c < 32) || (c > 126)) {
-                    stringToSend = [stringToSend stringByReplacingCharactersInRange:NSMakeRange(i, 1) withString:@""];
+                if ((c >= 32) && (c <= 126)) {
+                    safeString = [safeString stringByAppendingString:[stringToSend substringWithRange:NSMakeRange(i, 1)]];
                 }
             }
-            [self sendAsciiString:stringToSend];
+            [self sendAsciiString:safeString];
         }
     }
 }
